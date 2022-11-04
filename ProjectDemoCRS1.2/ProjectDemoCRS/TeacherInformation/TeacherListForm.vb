@@ -9,6 +9,20 @@
     Dim teacherMdl As New Teacher
 
     Private Sub TeacherListForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'disable all buttons here
 
+        conn.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
+
+        Try
+            'opens the connection
+            conn.Open()
+            If conn.State = ConnectionState.Open Then
+                MsgBox("MS Database Connected!")
+                ' display all teacher function here
+            End If
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        conn.Close()
     End Sub
 End Class

@@ -173,6 +173,9 @@
     <EmbeddedResource Include="StudentInformation\StudentListForm.resx">
       <DependentUpon>StudentListForm.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TeacherInformation\TeacherListForm.resx">
+      <DependentUpon>TeacherListForm.vb</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\Application.myapp">
