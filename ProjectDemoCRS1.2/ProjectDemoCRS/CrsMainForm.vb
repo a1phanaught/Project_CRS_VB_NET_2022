@@ -15,5 +15,7 @@
         StudentListForm.ShowDialog()
     End Sub
 
-
+    Private Sub FindStaffTeacherToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles FindStaffTeacherToolStripMenuItem.Click
+        TeacherListForm.ShowDialog()
+    End Sub
 End Class

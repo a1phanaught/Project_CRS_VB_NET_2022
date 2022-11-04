@@ -138,6 +138,12 @@
     </Compile>
     <Compile Include="StudentInformation\Subject.vb" />
     <Compile Include="TeacherInformation\Teacher.vb" />
+    <Compile Include="TeacherInformation\TeacherListForm.Designer.vb">
+      <DependentUpon>TeacherListForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TeacherInformation\TeacherListForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="CrsMainForm.resx">
