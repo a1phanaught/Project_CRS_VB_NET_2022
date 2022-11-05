@@ -122,3 +122,4 @@ C:\Users\User\Desktop\UniSem5\vb\project\Project_CRS_VB_NET_2022\ProjectDemoCRS1
 C:\Users\User\Desktop\UniSem5\vb\project\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS1.2.xml
 C:\Users\User\Desktop\UniSem5\vb\project\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS1.2.pdb
 C:\Users\User\Desktop\UniSem5\vb\project\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.TeacherListForm.resources
+C:\Users\User\Desktop\UniSem5\vb\project\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.TeacherForm.resources

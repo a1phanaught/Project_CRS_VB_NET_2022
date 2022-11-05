@@ -40,4 +40,9 @@
     Private Sub clearTeacherGrid()
         Me.ds.Clear()
     End Sub
+
+    Private Sub AddTeacherButton_Click(sender As Object, e As EventArgs) Handles AddTeacherButton.Click
+        TeacherForm.prepareToAddNewTeacher()
+        TeacherForm.ShowDialog()
+    End Sub
 End Class

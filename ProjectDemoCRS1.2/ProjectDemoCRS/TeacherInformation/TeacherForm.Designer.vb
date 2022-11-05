@@ -22,7 +22,7 @@ Partial Class TeacherForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.NameTextBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ICTextBox = New System.Windows.Forms.TextBox()
@@ -30,15 +30,19 @@ Partial Class TeacherForm
         Me.PhoneNumTextBox = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.EmailTextBox = New System.Windows.Forms.TextBox()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.AddUpdateButton = New System.Windows.Forms.Button()
+        Me.CancelButton = New System.Windows.Forms.Button()
+        Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TextBox2
+        'NameTextBox
         '
-        Me.TextBox2.Location = New System.Drawing.Point(386, 127)
-        Me.TextBox2.Margin = New System.Windows.Forms.Padding(5)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(148, 30)
-        Me.TextBox2.TabIndex = 1
+        Me.NameTextBox.Location = New System.Drawing.Point(386, 127)
+        Me.NameTextBox.Margin = New System.Windows.Forms.Padding(5)
+        Me.NameTextBox.Name = "NameTextBox"
+        Me.NameTextBox.Size = New System.Drawing.Size(148, 30)
+        Me.NameTextBox.TabIndex = 1
         '
         'Label1
         '
@@ -100,6 +104,35 @@ Partial Class TeacherForm
         Me.EmailTextBox.Size = New System.Drawing.Size(148, 30)
         Me.EmailTextBox.TabIndex = 8
         '
+        'GroupBox1
+        '
+        Me.GroupBox1.Controls.Add(Me.CancelButton)
+        Me.GroupBox1.Controls.Add(Me.AddUpdateButton)
+        Me.GroupBox1.Location = New System.Drawing.Point(105, 25)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(602, 466)
+        Me.GroupBox1.TabIndex = 9
+        Me.GroupBox1.TabStop = False
+        Me.GroupBox1.Text = "Teacher Information"
+        '
+        'AddUpdateButton
+        '
+        Me.AddUpdateButton.Location = New System.Drawing.Point(81, 381)
+        Me.AddUpdateButton.Name = "AddUpdateButton"
+        Me.AddUpdateButton.Size = New System.Drawing.Size(124, 42)
+        Me.AddUpdateButton.TabIndex = 0
+        Me.AddUpdateButton.Text = "Button1"
+        Me.AddUpdateButton.UseVisualStyleBackColor = True
+        '
+        'CancelButton
+        '
+        Me.CancelButton.Location = New System.Drawing.Point(305, 381)
+        Me.CancelButton.Name = "CancelButton"
+        Me.CancelButton.Size = New System.Drawing.Size(124, 42)
+        Me.CancelButton.TabIndex = 1
+        Me.CancelButton.Text = "Cancel"
+        Me.CancelButton.UseVisualStyleBackColor = True
+        '
         'TeacherForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
@@ -112,17 +145,19 @@ Partial Class TeacherForm
         Me.Controls.Add(Me.ICTextBox)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.NameTextBox)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Margin = New System.Windows.Forms.Padding(5)
         Me.Name = "TeacherForm"
         Me.Text = "TeacherForm"
+        Me.GroupBox1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents NameTextBox As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents ICTextBox As TextBox
@@ -130,4 +165,7 @@ Partial Class TeacherForm
     Friend WithEvents PhoneNumTextBox As TextBox
     Friend WithEvents Label4 As Label
     Friend WithEvents EmailTextBox As TextBox
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents CancelButton As Button
+    Friend WithEvents AddUpdateButton As Button
 End Class
