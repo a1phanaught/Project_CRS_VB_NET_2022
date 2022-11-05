@@ -31,8 +31,8 @@ Partial Class TeacherForm
         Me.Label4 = New System.Windows.Forms.Label()
         Me.EmailTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.AddUpdateButton = New System.Windows.Forms.Button()
         Me.CancelButton = New System.Windows.Forms.Button()
+        Me.AddUpdateButton = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -115,15 +115,6 @@ Partial Class TeacherForm
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Teacher Information"
         '
-        'AddUpdateButton
-        '
-        Me.AddUpdateButton.Location = New System.Drawing.Point(81, 381)
-        Me.AddUpdateButton.Name = "AddUpdateButton"
-        Me.AddUpdateButton.Size = New System.Drawing.Size(124, 42)
-        Me.AddUpdateButton.TabIndex = 0
-        Me.AddUpdateButton.Text = "Button1"
-        Me.AddUpdateButton.UseVisualStyleBackColor = True
-        '
         'CancelButton
         '
         Me.CancelButton.Location = New System.Drawing.Point(305, 381)
@@ -132,6 +123,15 @@ Partial Class TeacherForm
         Me.CancelButton.TabIndex = 1
         Me.CancelButton.Text = "Cancel"
         Me.CancelButton.UseVisualStyleBackColor = True
+        '
+        'AddUpdateButton
+        '
+        Me.AddUpdateButton.Location = New System.Drawing.Point(81, 381)
+        Me.AddUpdateButton.Name = "AddUpdateButton"
+        Me.AddUpdateButton.Size = New System.Drawing.Size(124, 42)
+        Me.AddUpdateButton.TabIndex = 0
+        Me.AddUpdateButton.Text = "Button1"
+        Me.AddUpdateButton.UseVisualStyleBackColor = True
         '
         'TeacherForm
         '

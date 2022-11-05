@@ -3,7 +3,26 @@
     Dim oldTeacherRec As TeacherRecord
 
     Friend Sub prepareToUpdateTeacher(teacherIC As String)
+        MessageBox.Show("Update teacher with IC: " & teacherIC)
+        With Me
+            .AddUpdateButton.Text = "Update"
+        End With
+        'display existing data here
+        displayExistingTeacherInfo(teacherIC)
+    End Sub
 
+    Private Sub displayExistingTeacherInfo(teacherIC As String)
+        Try
+            oldTeacherRec = myTeacher.getTeacherRecord(teacherIC)
+            With Me
+                .ICTextBox.Text = oldTeacherRec.ic
+                .NameTextBox.Text = oldTeacherRec.name
+                .EmailTextBox.Text = oldTeacherRec.email
+                .PhoneNumTextBox.Text = oldTeacherRec.phoneNumber
+            End With
+        Catch ex As Exception
+            MessageBox.Show(ex.ToString)
+        End Try
     End Sub
 
     Friend Sub prepareToAddNewTeacher()
@@ -18,6 +37,7 @@
             addThisTeacher()
         Else
             'updateTeacher
+            updateThisTeacher(oldTeacherRec)
         End If
     End Sub
 
@@ -41,6 +61,24 @@
         End If
     End Sub
 
+    Private Sub updateThisTeacher(oldTeacherRec As TeacherRecord)
+        Dim theNewTeacherRec As New TeacherRecord
+        Dim updateOk As Boolean
+        Dim messageString As String
+
+        theNewTeacherRec.ic = ICTextBox.Text
+        theNewTeacherRec.name = NameTextBox.Text
+        theNewTeacherRec.email = EmailTextBox.Text
+        theNewTeacherRec.phoneNumber = PhoneNumTextBox.Text
+        updateOk = myTeacher.updateThisTeacher(oldTeacherRec, theNewTeacherRec)
+
+        If updateOk Then
+            messageString = "Teacher with IC: " & theNewTeacherRec.ic & " has been updated"
+            MessageBox.Show(messageString, "Update", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Me.Close()
+        End If
+    End Sub
+
     Private Sub clearStudentForm()
         With Me
             .NameTextBox.Clear()
@@ -51,5 +89,7 @@
         End With
     End Sub
 
-
+    Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
+        Me.Close()
+    End Sub
 End Class

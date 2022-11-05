@@ -12,7 +12,7 @@ Public Class Teacher
         Dim teacherRec As New TeacherRecord
         Try
             Dim sqlString As String
-            con.ConnectionString = My.Resources.databaseConnectionPath
+            con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
             sqlString = "select * from teacher where (icNumber = '" & icNumber & "')"
 
