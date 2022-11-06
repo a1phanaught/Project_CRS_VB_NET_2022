@@ -45,6 +45,7 @@
     Private Sub AddTeacherButton_Click(sender As Object, e As EventArgs) Handles AddTeacherButton.Click
         TeacherForm.prepareToAddNewTeacher()
         TeacherForm.ShowDialog()
+        displayAllTeachers()
     End Sub
 
     Private Sub UpdateTeacherButton_Click(sender As Object, e As EventArgs) Handles UpdateTeacherButton.Click
@@ -92,5 +93,18 @@
             .UpdateTeacherButton.Enabled = True
             .DeleteTeacherButton.Enabled = True
         End With
+    End Sub
+
+    Private Sub DeleteTeacherButton_Click(sender As Object, e As EventArgs) Handles DeleteTeacherButton.Click
+        Dim dialogResult As MsgBoxResult
+        Dim deleteOk As Boolean
+        Dim messageString As String = "Delete teacher : " & mICString
+        If mICString <> "" Then
+            dialogResult = MessageBox.Show(messageString, "Confirm Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
+            If dialogResult = MsgBoxResult.Ok Then
+                deleteOk = teacherMdl.deleteTeacherRecord(mICString)
+                displayAllTeachers()
+            End If
+        End If
     End Sub
 End Class

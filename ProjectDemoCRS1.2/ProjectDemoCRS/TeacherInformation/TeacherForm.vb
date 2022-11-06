@@ -75,11 +75,12 @@
         If updateOk Then
             messageString = "Teacher with IC: " & theNewTeacherRec.ic & " has been updated"
             MessageBox.Show(messageString, "Update", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            clearTeacherForm()
             Me.Close()
         End If
     End Sub
 
-    Private Sub clearStudentForm()
+    Private Sub clearTeacherForm()
         With Me
             .NameTextBox.Clear()
             .ICTextBox.Clear()

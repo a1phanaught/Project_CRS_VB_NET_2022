@@ -76,7 +76,7 @@ Public Class Teacher
             sqlString = "update teacher set icNumber = '" & newTeacherRec.ic & "',"
             sqlString = sqlString & " name = '" & newTeacherRec.name & "',"
             sqlString = sqlString & " email = '" & newTeacherRec.email & "',"
-            sqlString = sqlString & " phoneNumber = '" & newTeacherRec.phoneNumber & "',"
+            sqlString = sqlString & " phoneNumber = '" & newTeacherRec.phoneNumber & "'"
 
             MessageBox.Show(sqlString)
             Dim cmd As New OleDbCommand(sqlString, con)
