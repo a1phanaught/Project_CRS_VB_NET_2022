@@ -14,8 +14,8 @@
         Try
             oldSubjectRec = mySubject.getSubjectRecordinfo(Subjectcode)
             With Me
-                .SubjectCodeTextBox.Text = oldSubjectRec.code
-                .SubjectNameTextBox.Text = oldSubjectRec.name
+                .SubjectCodeTextBox.Text = oldSubjectRec.subjectcode
+                .SubjectNameTextBox.Text = oldSubjectRec.subjectname
             End With
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
@@ -43,13 +43,13 @@
         Dim messageString As String
 
         With theNewSubjectRec
-            .code = SubjectCodeTextBox.Text
-            .name = SubjectNameTextBox.Text
+            .subjectcode = SubjectCodeTextBox.Text
+            .subjectname = SubjectNameTextBox.Text
         End With
 
         addOk = mySubject.addSubject(theNewSubjectRec)
         If addOk Then
-            messageString = "New Subject with CODE: " & theNewSubjectRec.code & " has been added"
+            messageString = "New Subject with CODE: " & theNewSubjectRec.subjectcode & " has been added"
             MessageBox.Show(messageString, "Add New Subject ", MessageBoxButtons.OK, MessageBoxIcon.Information)
             Me.Close()
         End If
@@ -60,12 +60,12 @@
         Dim updateOk As Boolean
         Dim messageString As String
 
-        theNewSubjectRec.code = SubjectCodeTextBox.Text
-        theNewSubjectRec.name = SubjectNameTextBox.Text
+        theNewSubjectRec.subjectcode = SubjectCodeTextBox.Text
+        theNewSubjectRec.subjectname = SubjectNameTextBox.Text
         updateOk = mySubject.updateThisSubject(oldSubjectRec, theNewSubjectRec)
 
         If updateOk Then
-            messageString = "Subject with CODE: " & theNewSubjectRec.code & " has been updated"
+            messageString = "Subject with CODE: " & theNewSubjectRec.subjectcode & " has been updated"
             MessageBox.Show(messageString, "Update", MessageBoxButtons.OK, MessageBoxIcon.Information)
             clearSubjectForm()
             Me.Close()

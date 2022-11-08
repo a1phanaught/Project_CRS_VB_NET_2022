@@ -1,20 +1,20 @@
 ﻿Imports System.Data.OleDb
 Friend Structure SubjectRecordinfo
-    Dim code, name
+    Dim subjectcode, subjectname
     Dim dob As Date
 End Structure
 
 Public Class Subjectinfo
 
     Private con As New OleDb.OleDbConnection
-    Friend Function getSubjectRecordinfo(code) As SubjectRecordinfo
+    Friend Function getSubjectRecordinfo(subjectcode) As SubjectRecordinfo
         Dim dr As OleDbDataReader
         Dim SubjectRec As New SubjectRecordinfo
         Try
             Dim sqlString As String
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
-            sqlString = "select * from subject where (code = '" & code & "')"
+            sqlString = "select * from subject where (subjectcode = '" & subjectcode & "')"
 
             MessageBox.Show(sqlString)
             Debug.WriteLine(sqlString)
@@ -22,13 +22,13 @@ Public Class Subjectinfo
             dr = cmd.ExecuteReader()
             If dr.HasRows Then
                 dr.Read()
-                SubjectRec.code = dr("code").ToString
-                SubjectRec.name = dr("name").ToString
+                SubjectRec.subjectcode = dr("subjectcode").ToString
+                SubjectRec.subjectname = dr("subjectname").ToString
                 con.Close()
                 Return SubjectRec
             End If
         Catch ex As Exception
-            MessageBox.Show("Error accessing subject record for subject with Code :" & code)
+            MessageBox.Show("Error accessing subject record for subject with Code :" & subjectcode)
             con.Close()
             Return SubjectRec
         End Try
@@ -47,8 +47,8 @@ Public Class Subjectinfo
                 Exit Function
             End If
 
-            sqlString = "insert into subject(code, name)"
-            sqlString = sqlString & " values('" & newSubjectRec.code & "','" & newSubjectRec.name & "')"
+            sqlString = "insert into subject(subjectcode, subjectname)"
+            sqlString = sqlString & " values('" & newSubjectRec.subjectcode & "','" & newSubjectRec.subjectname & "')"
             MessageBox.Show(sqlString)
             Debug.WriteLine(sqlString)
             Dim cmd As New OleDbCommand(sqlString, con)
@@ -69,8 +69,8 @@ Public Class Subjectinfo
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
 
-            sqlString = "update subject set icNumber = '" & newSubjectRec.code & "',"
-            sqlString = sqlString & " name = '" & newSubjectRec.name & "',"
+            sqlString = "update subject set code = '" & newSubjectRec.subjectcode & "',"
+            sqlString = sqlString & " subjectname = '" & newSubjectRec.subjectname & "',"
 
             MessageBox.Show(sqlString)
             Dim cmd As New OleDbCommand(sqlString, con)
@@ -82,12 +82,12 @@ Public Class Subjectinfo
             Return False
         End Try
     End Function
-    Friend Function deleteSubjectRecord(code As String) As Boolean
+    Friend Function deleteSubjectRecord(subjectcode As String) As Boolean
         Try
             Dim sqlString As String
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
-            sqlString = "delete from subject where (code = '" & code & "')"
+            sqlString = "delete from subject where (subjectcode = '" & subjectcode & "')"
             MessageBox.Show(sqlString)
             Dim cmd As New OleDbCommand(sqlString, con)
             cmd.ExecuteNonQuery()
