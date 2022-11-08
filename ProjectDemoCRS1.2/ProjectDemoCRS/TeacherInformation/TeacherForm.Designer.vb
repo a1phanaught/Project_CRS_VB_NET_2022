@@ -41,7 +41,7 @@ Partial Class TeacherForm
         Me.NameTextBox.Location = New System.Drawing.Point(386, 127)
         Me.NameTextBox.Margin = New System.Windows.Forms.Padding(5)
         Me.NameTextBox.Name = "NameTextBox"
-        Me.NameTextBox.Size = New System.Drawing.Size(148, 30)
+        Me.NameTextBox.Size = New System.Drawing.Size(148, 35)
         Me.NameTextBox.TabIndex = 1
         '
         'Label1
@@ -50,7 +50,7 @@ Partial Class TeacherForm
         Me.Label1.Location = New System.Drawing.Point(223, 132)
         Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(64, 25)
+        Me.Label1.Size = New System.Drawing.Size(78, 29)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Name"
         '
@@ -59,7 +59,7 @@ Partial Class TeacherForm
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(181, 196)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(106, 25)
+        Me.Label2.Size = New System.Drawing.Size(129, 29)
         Me.Label2.TabIndex = 3
         Me.Label2.Text = "IC Number"
         '
@@ -68,7 +68,7 @@ Partial Class TeacherForm
         Me.ICTextBox.Location = New System.Drawing.Point(386, 191)
         Me.ICTextBox.Margin = New System.Windows.Forms.Padding(5)
         Me.ICTextBox.Name = "ICTextBox"
-        Me.ICTextBox.Size = New System.Drawing.Size(148, 30)
+        Me.ICTextBox.Size = New System.Drawing.Size(148, 35)
         Me.ICTextBox.TabIndex = 4
         '
         'Label3
@@ -76,7 +76,7 @@ Partial Class TeacherForm
         Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(183, 258)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(104, 25)
+        Me.Label3.Size = New System.Drawing.Size(127, 29)
         Me.Label3.TabIndex = 5
         Me.Label3.Text = "Phone No."
         '
@@ -85,7 +85,7 @@ Partial Class TeacherForm
         Me.PhoneNumTextBox.Location = New System.Drawing.Point(386, 253)
         Me.PhoneNumTextBox.Margin = New System.Windows.Forms.Padding(5)
         Me.PhoneNumTextBox.Name = "PhoneNumTextBox"
-        Me.PhoneNumTextBox.Size = New System.Drawing.Size(148, 30)
+        Me.PhoneNumTextBox.Size = New System.Drawing.Size(148, 35)
         Me.PhoneNumTextBox.TabIndex = 6
         '
         'Label4
@@ -93,7 +93,7 @@ Partial Class TeacherForm
         Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(227, 319)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(60, 25)
+        Me.Label4.Size = New System.Drawing.Size(74, 29)
         Me.Label4.TabIndex = 7
         Me.Label4.Text = "Email"
         '
@@ -101,7 +101,7 @@ Partial Class TeacherForm
         '
         Me.EmailTextBox.Location = New System.Drawing.Point(386, 314)
         Me.EmailTextBox.Name = "EmailTextBox"
-        Me.EmailTextBox.Size = New System.Drawing.Size(148, 30)
+        Me.EmailTextBox.Size = New System.Drawing.Size(148, 35)
         Me.EmailTextBox.TabIndex = 8
         '
         'GroupBox1
@@ -135,7 +135,7 @@ Partial Class TeacherForm
         '
         'TeacherForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(14.0!, 29.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(841, 503)
         Me.Controls.Add(Me.EmailTextBox)

@@ -138,6 +138,12 @@
     </Compile>
     <Compile Include="StudentInformation\Subject.vb" />
     <Compile Include="SubjectInformation\Subject.vb" />
+    <Compile Include="SubjectInformation\SubjectForm.Designer.vb">
+      <DependentUpon>SubjectForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SubjectInformation\SubjectForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="SubjectInformation\SubjectListForm.Designer.vb">
       <DependentUpon>SubjectListForm.vb</DependentUpon>
     </Compile>
@@ -185,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="StudentInformation\StudentListForm.resx">
       <DependentUpon>StudentListForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubjectInformation\SubjectForm.resx">
+      <DependentUpon>SubjectForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SubjectInformation\SubjectListForm.resx">
       <DependentUpon>SubjectListForm.vb</DependentUpon>
