@@ -1,4 +1,6 @@
-﻿Public Class TeacherListForm
+﻿Imports System.Data.SqlTypes
+
+Public Class TeacherListForm
 
     Public conn As New OleDb.OleDbConnection
     Dim ds As New DataSet
@@ -106,5 +108,27 @@
                 displayAllTeachers()
             End If
         End If
+    End Sub
+
+    Private Sub SearchName_Click(sender As Object, e As EventArgs) Handles SearchNameButton.Click
+        clearTeacherGrid()
+        sqlString = "select * from teacher where name like '%" & SearchTextBox.Text & "%'"
+        dataAdapter = New OleDb.OleDbDataAdapter(sqlString, conn)
+        dataAdapter.Fill(ds, "ihsanTuitionCenterDb")
+        Me.TeacherDataGridView.DataMember = "ihsanTuitionCenterDb"
+        TeacherDataGridView.DataSource = ds
+    End Sub
+
+    Private Sub SearchIC_Click(sender As Object, e As EventArgs) Handles SearchICButton.Click
+        clearTeacherGrid()
+        sqlString = "select * from teacher where icNumber like '%" & SearchTextBox.Text & "%'"
+        dataAdapter = New OleDb.OleDbDataAdapter(sqlString, conn)
+        dataAdapter.Fill(ds, "ihsanTuitionCenterDb")
+        Me.TeacherDataGridView.DataMember = "ihsanTuitionCenterDb"
+        TeacherDataGridView.DataSource = ds
+    End Sub
+
+    Private Sub DisplayAllButton_Click(sender As Object, e As EventArgs) Handles DisplayAllButton.Click
+        displayAllTeachers()
     End Sub
 End Class
