@@ -103,4 +103,30 @@
             End If
         End If
     End Sub
+
+    Private Sub bycodeButton_Click(sender As Object, e As EventArgs) Handles bycodeButton.Click
+        clearSubjectGrid()
+
+        sqlString = "Select * from subject where subjectCode like '%" & searchsubjectTextBox.Text & "%'"
+        Debug.WriteLine(sqlString)
+        dataAdapter = New OleDb.OleDbDataAdapter(sqlString, conn)
+        dataAdapter.Fill(ds, "ihsanTuitionCenterDb")
+        Me.SubjectDataGridView.DataMember = "ihsanTuitionCenterDb"
+        SubjectDataGridView.DataSource = ds
+    End Sub
+
+    Private Sub displayallsubButton_Click(sender As Object, e As EventArgs) Handles displayallsubButton.Click
+        displayAllSubject()
+    End Sub
+
+    Private Sub bynameButton_Click(sender As Object, e As EventArgs) Handles bynameButton.Click
+        clearSubjectGrid()
+
+        sqlString = "Select * from subject where subjectName like '%" & searchsubjectTextBox.Text & "%'"
+        Debug.WriteLine(sqlString)
+        dataAdapter = New OleDb.OleDbDataAdapter(sqlString, conn)
+        dataAdapter.Fill(ds, "ihsanTuitionCenterDb")
+        Me.SubjectDataGridView.DataMember = "ihsanTuitionCenterDb"
+        SubjectDataGridView.DataSource = ds
+    End Sub
 End Class
