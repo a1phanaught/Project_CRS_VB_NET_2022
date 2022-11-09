@@ -146,3 +146,5 @@ C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Deb
 C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS1.2.pdb
 C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.SubjectListForm.resources
 C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.SubjectForm.resources
+C:\Users\User\Desktop\UniSem5\vb\project\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.SubjectForm.resources
+C:\Users\User\Desktop\UniSem5\vb\project\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.SubjectListForm.resources

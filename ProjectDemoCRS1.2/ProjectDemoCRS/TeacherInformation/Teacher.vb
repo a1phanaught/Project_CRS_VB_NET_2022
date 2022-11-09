@@ -77,6 +77,7 @@ Public Class Teacher
             sqlString = sqlString & " name = '" & newTeacherRec.name & "',"
             sqlString = sqlString & " email = '" & newTeacherRec.email & "',"
             sqlString = sqlString & " phoneNumber = '" & newTeacherRec.phoneNumber & "'"
+            sqlString = sqlString & " where icNumber = '" & oldTeacherRec.ic & "'"
 
             MessageBox.Show(sqlString)
             Dim cmd As New OleDbCommand(sqlString, con)
@@ -86,6 +87,7 @@ Public Class Teacher
         Catch ex As Exception
             MessageBox.Show("Error updating teacher record. Message:" & ex.ToString)
             Return False
+            con.Close()
         End Try
     End Function
 
