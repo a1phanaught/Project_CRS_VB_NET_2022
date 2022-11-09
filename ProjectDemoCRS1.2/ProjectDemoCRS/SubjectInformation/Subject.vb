@@ -1,7 +1,6 @@
 ﻿Imports System.Data.OleDb
 Friend Structure SubjectRecordinfo
-    Dim subjectcode, subjectname
-    Dim dob As Date
+    Dim subjectcode, subjectname, subjectcredit
 End Structure
 
 Public Class Subjectinfo
@@ -14,7 +13,7 @@ Public Class Subjectinfo
             Dim sqlString As String
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
-            sqlString = "select * from subject where (subjectcode = '" & subjectcode & "')"
+            sqlString = "select * from subject where (subjectCode = '" & subjectcode & "')"
 
             MessageBox.Show(sqlString)
             Debug.WriteLine(sqlString)
@@ -22,8 +21,9 @@ Public Class Subjectinfo
             dr = cmd.ExecuteReader()
             If dr.HasRows Then
                 dr.Read()
-                SubjectRec.subjectcode = dr("subjectcode").ToString
-                SubjectRec.subjectname = dr("subjectname").ToString
+                SubjectRec.subjectcode = dr("subjectCode").ToString
+                SubjectRec.subjectname = dr("subjectName").ToString
+                SubjectRec.subjectcredit = dr("credit").ToString
                 con.Close()
                 Return SubjectRec
             End If
@@ -47,8 +47,8 @@ Public Class Subjectinfo
                 Exit Function
             End If
 
-            sqlString = "insert into subject(subjectcode, subjectname)"
-            sqlString = sqlString & " values('" & newSubjectRec.subjectcode & "','" & newSubjectRec.subjectname & "')"
+            sqlString = "insert into subject(subjectCode, subjectName, credit)"
+            sqlString = sqlString & " values('" & newSubjectRec.subjectcode & "','" & newSubjectRec.subjectname & "','" & newSubjectRec.subjectcredit & "')"
             MessageBox.Show(sqlString)
             Debug.WriteLine(sqlString)
             Dim cmd As New OleDbCommand(sqlString, con)
@@ -69,8 +69,9 @@ Public Class Subjectinfo
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
 
-            sqlString = "update subject set code = '" & newSubjectRec.subjectcode & "',"
-            sqlString = sqlString & " subjectname = '" & newSubjectRec.subjectname & "',"
+            sqlString = "update subject set subjectCode = '" & newSubjectRec.subjectcode & "',"
+            sqlString = sqlString & " subjectName = '" & newSubjectRec.subjectname & "',"
+            sqlString = sqlString & " credit = '" & newSubjectRec.subjectcredit & "'"
 
             MessageBox.Show(sqlString)
             Dim cmd As New OleDbCommand(sqlString, con)
@@ -87,7 +88,7 @@ Public Class Subjectinfo
             Dim sqlString As String
             con.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             con.Open()
-            sqlString = "delete from subject where (subjectcode = '" & subjectcode & "')"
+            sqlString = "delete from subject where (subjectCode = '" & subjectcode & "')"
             MessageBox.Show(sqlString)
             Dim cmd As New OleDbCommand(sqlString, con)
             cmd.ExecuteNonQuery()

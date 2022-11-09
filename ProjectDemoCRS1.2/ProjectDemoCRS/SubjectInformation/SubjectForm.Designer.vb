@@ -30,6 +30,8 @@ Partial Class SubjectForm
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.CancelButton = New System.Windows.Forms.Button()
         Me.AddUpdateButton = New System.Windows.Forms.Button()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.CreditTextBox = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -80,6 +82,8 @@ Partial Class SubjectForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.CreditTextBox)
+        Me.GroupBox1.Controls.Add(Me.Label4)
         Me.GroupBox1.Controls.Add(Me.SubjectNameTextBox)
         Me.GroupBox1.Controls.Add(Me.CancelButton)
         Me.GroupBox1.Controls.Add(Me.AddUpdateButton)
@@ -97,7 +101,7 @@ Partial Class SubjectForm
         'CancelButton
         '
         Me.CancelButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.CancelButton.Location = New System.Drawing.Point(268, 258)
+        Me.CancelButton.Location = New System.Drawing.Point(284, 278)
         Me.CancelButton.Name = "CancelButton"
         Me.CancelButton.Size = New System.Drawing.Size(124, 42)
         Me.CancelButton.TabIndex = 1
@@ -107,12 +111,30 @@ Partial Class SubjectForm
         'AddUpdateButton
         '
         Me.AddUpdateButton.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddUpdateButton.Location = New System.Drawing.Point(113, 258)
+        Me.AddUpdateButton.Location = New System.Drawing.Point(112, 278)
         Me.AddUpdateButton.Name = "AddUpdateButton"
         Me.AddUpdateButton.Size = New System.Drawing.Size(124, 42)
         Me.AddUpdateButton.TabIndex = 0
         Me.AddUpdateButton.Text = "Button1"
         Me.AddUpdateButton.UseVisualStyleBackColor = True
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(146, 222)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(90, 29)
+        Me.Label4.TabIndex = 15
+        Me.Label4.Text = "Credits"
+        '
+        'CreditTextBox
+        '
+        Me.CreditTextBox.Location = New System.Drawing.Point(284, 222)
+        Me.CreditTextBox.Margin = New System.Windows.Forms.Padding(5)
+        Me.CreditTextBox.Name = "CreditTextBox"
+        Me.CreditTextBox.Size = New System.Drawing.Size(148, 35)
+        Me.CreditTextBox.TabIndex = 16
         '
         'SubjectForm
         '
@@ -138,4 +160,6 @@ Partial Class SubjectForm
     Friend WithEvents GroupBox1 As GroupBox
     Friend WithEvents CancelButton As Button
     Friend WithEvents AddUpdateButton As Button
+    Friend WithEvents CreditTextBox As TextBox
+    Friend WithEvents Label4 As Label
 End Class

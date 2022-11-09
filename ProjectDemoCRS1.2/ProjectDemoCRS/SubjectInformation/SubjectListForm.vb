@@ -6,7 +6,7 @@
 
     Dim sqlString As String
     Dim mICString As String
-    Dim SubjectMdl As New Subject
+    Dim SubjectMdl As New Subjectinfo
 
     Private Sub SubjectListForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'disable all buttons here
@@ -94,7 +94,7 @@
     Private Sub DeleteSubjectButton_Click(sender As Object, e As EventArgs) Handles DeleteSubjectButton.Click
         Dim dialogResult As MsgBoxResult
         Dim deleteOk As Boolean
-        Dim messageString As String = "Delete Subject : " & mICString
+        Dim messageString As String = "Delete subject : " & mICString
         If mICString <> "" Then
             dialogResult = MessageBox.Show(messageString, "Confirm Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question)
             If dialogResult = MsgBoxResult.Ok Then

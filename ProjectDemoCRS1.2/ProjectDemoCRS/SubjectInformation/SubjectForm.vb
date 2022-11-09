@@ -16,6 +16,7 @@
             With Me
                 .SubjectCodeTextBox.Text = oldSubjectRec.subjectcode
                 .SubjectNameTextBox.Text = oldSubjectRec.subjectname
+                .CreditTextBox.Text = oldSubjectRec.subjectcredit
             End With
         Catch ex As Exception
             MessageBox.Show(ex.ToString)
@@ -45,6 +46,7 @@
         With theNewSubjectRec
             .subjectcode = SubjectCodeTextBox.Text
             .subjectname = SubjectNameTextBox.Text
+            .subjectcredit = CreditTextBox.Text
         End With
 
         addOk = mySubject.addSubject(theNewSubjectRec)
@@ -62,6 +64,7 @@
 
         theNewSubjectRec.subjectcode = SubjectCodeTextBox.Text
         theNewSubjectRec.subjectname = SubjectNameTextBox.Text
+        theNewSubjectRec.subjectcredit = CreditTextBox.Text
         updateOk = mySubject.updateThisSubject(oldSubjectRec, theNewSubjectRec)
 
         If updateOk Then
@@ -75,6 +78,7 @@
         With Me
             .SubjectCodeTextBox.Clear()
             .SubjectNameTextBox.Clear()
+            .CreditTextBox.Clear()
 
         End With
     End Sub
@@ -82,4 +86,6 @@
     Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
         Me.Close()
     End Sub
+
+
 End Class
