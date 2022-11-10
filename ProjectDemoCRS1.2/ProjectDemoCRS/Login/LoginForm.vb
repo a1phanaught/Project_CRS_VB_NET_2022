@@ -8,6 +8,7 @@ Public Class LoginForm
             CrsMainForm.Show()
             Me.Hide()
         End If
+        ValidationLabel.Text = "Incorrect username/password!"
     End Sub
 
     Private Sub Cancel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Cancel.Click
