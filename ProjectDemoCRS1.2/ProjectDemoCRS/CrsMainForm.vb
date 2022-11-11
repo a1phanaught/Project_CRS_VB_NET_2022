@@ -24,4 +24,8 @@
     End Sub
 
 
+    'Taufiq edit StudentRegistration
+    Private Sub StudentRegistrationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StudentRegistrationToolStripMenuItem.Click
+        StudentRegistrationForm.ShowDialog()
+    End Sub
 End Class

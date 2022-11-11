@@ -148,3 +148,27 @@ C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Deb
 C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.SubjectForm.resources
 C:\Users\User\Desktop\UniSem5\vb\project\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.SubjectForm.resources
 C:\Users\User\Desktop\UniSem5\vb\project\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.SubjectListForm.resources
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\bin\Debug\ProjectDemoCRS1.2.exe.config
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\bin\Debug\ProjectDemoCRS1.2.exe
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\bin\Debug\ProjectDemoCRS1.2.pdb
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\bin\Debug\ProjectDemoCRS1.2.xml
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.AssemblyReference.cache
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.SuggestedBindingRedirects.cache
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.CrsMainForm.resources
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.LoginForm.resources
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.Resources.resources
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentGroupForm.resources
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentGroupListForm.resources
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.RegistrationForm.resources
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentForm.resources
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentListForm.resources
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.SubjectForm.resources
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.SubjectListForm.resources
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.TeacherForm.resources
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.TeacherListForm.resources
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.GenerateResource.cache
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.CoreCompileInputs.cache
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS1.2.exe
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS1.2.xml
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS1.2.pdb
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentRegistrationForm.resources
