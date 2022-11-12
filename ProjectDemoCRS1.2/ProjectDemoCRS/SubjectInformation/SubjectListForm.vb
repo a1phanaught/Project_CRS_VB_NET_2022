@@ -1,4 +1,6 @@
-﻿Public Class SubjectListForm
+﻿Imports System.Drawing.Printing
+
+Public Class SubjectListForm
 
     Public conn As New OleDb.OleDbConnection
     Dim ds As New DataSet
@@ -129,4 +131,20 @@
         Me.SubjectDataGridView.DataMember = "ihsanTuitionCenterDb"
         SubjectDataGridView.DataSource = ds
     End Sub
+
+    'PRINT SUBJECT LIST BY SUBJECT CODE // ADD BY TAUFIQ ON 13/11/22
+    Private Sub PrintButton_Click(sender As Object, e As EventArgs) Handles PrintButton.Click
+
+        PrintPreviewDialog1.Document = PrintDocument1
+        PrintPreviewDialog1.PrintPreviewControl.Zoom = 1
+        PrintPreviewDialog1.ShowDialog()
+
+    End Sub
+
+    Private Sub PrintDocument1_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument1.PrintPage
+        Dim imagebmp As New Bitmap(Me.SubjectDataGridView.Width, Me.SubjectDataGridView.Height)
+        SubjectDataGridView.DrawToBitmap(imagebmp, New Rectangle(0, 0, Me.SubjectDataGridView.Width, Me.SubjectDataGridView.Height))
+        e.Graphics.DrawImage(imagebmp, 0, 0)
+    End Sub
+
 End Class

@@ -132,7 +132,7 @@ Partial Class StudentRegistrationForm
         Me.GroupBox2.Size = New System.Drawing.Size(678, 280)
         Me.GroupBox2.TabIndex = 3
         Me.GroupBox2.TabStop = False
-        Me.GroupBox2.Text = "Subject List"
+        Me.GroupBox2.Text = "Student List"
         '
         'Label1
         '
@@ -161,7 +161,7 @@ Partial Class StudentRegistrationForm
         '
         'PrintSubjectListButton
         '
-        Me.PrintSubjectListButton.Location = New System.Drawing.Point(556, 242)
+        Me.PrintSubjectListButton.Location = New System.Drawing.Point(288, 242)
         Me.PrintSubjectListButton.Name = "PrintSubjectListButton"
         Me.PrintSubjectListButton.Size = New System.Drawing.Size(116, 32)
         Me.PrintSubjectListButton.TabIndex = 1

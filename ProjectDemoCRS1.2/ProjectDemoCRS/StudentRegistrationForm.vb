@@ -21,7 +21,7 @@ Public Class StudentRegistrationForm
             conn.Open()
             If conn.State = ConnectionState.Open Then
                 MsgBox("MS Database Connected!")
-                'displayStudentSubject()
+                clearStudentSubjectGrid()
             End If
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -34,7 +34,7 @@ Public Class StudentRegistrationForm
     Private Sub MatricNoButton_Click(sender As Object, e As EventArgs) Handles ViewMatricNoButton.Click
         'display registration slip
         clearStudentSubjectGrid()
-        Dim cmd1 As New OleDbCommand("SELECT student.matricNumber,student.name,subjectregister.subjectCode,subject.subjectName,subject.credit from (student INNER JOIN subjectregister on student.matricNumber = subjectregister.matricNumber) INNER JOIN subject on subject.subjectCode = subjectregister.subjectCode WHERE student.matricNumber like '%" + ViewMatricNoTextBox.Text + "%'", conn)
+        Dim cmd1 As New OleDbCommand("SELECT student.matricNumber,student.name,subjectregister.subjectCode,subject.subjectName,subject.credit FROM (student INNER JOIN subjectregister on student.matricNumber = subjectregister.matricNumber) INNER JOIN subject on subject.subjectCode = subjectregister.subjectCode WHERE student.matricNumber like '%" + ViewMatricNoTextBox.Text + "%'", conn)
 
         Dim da As New OleDbDataAdapter
         Dim dt As New DataTable
@@ -50,13 +50,18 @@ Public Class StudentRegistrationForm
         StudentRegDataGridView.Columns(3).HeaderText = "Subject Name"
         StudentRegDataGridView.Columns(4).HeaderText = "Subject Credit"
 
-        'display total credit
+        'Remove Duplicate Cell
+
+
+        'display total credit and fee amount
         Dim colsum As Decimal
         For Each row As DataGridViewRow In StudentRegDataGridView.Rows
             colsum += row.Cells(4).Value
         Next
         TotalCreditLabel.Text = colsum.ToString
         FeeAmountLabel.Text = (colsum * 50).ToString("C")
+
+
 
     End Sub
 
@@ -80,9 +85,10 @@ Public Class StudentRegistrationForm
         EmailStudentSlip.ShowDialog()
     End Sub
 
-    'VIEW SUBJECT LIST BY CODE
+    'VIEW STUDENT LIST BY SUBJECT CODE
     Private Sub ViewSubjectCodeButton_Click(sender As Object, e As EventArgs) Handles ViewSubjectCodeButton.Click
-        Dim cmd1 As New OleDbCommand("SELECT subjectCode,subjectName,credit from subject where SubjectCode like '%" + SubjectCodeTextBox.Text + "%'", conn)
+        clearStudentSubjectGrid()
+        Dim cmd1 As New OleDbCommand("SELECT subjectregister.subjectCode,subject.subjectName,student.matricNumber,student.name FROM (student INNER JOIN subjectregister on student.matricNumber = subjectregister.matricNumber) INNER JOIN subject on subject.subjectCode = subjectregister.subjectCode WHERE subjectregister.subjectCode like '%" + SubjectCodeTextBox.Text + "%'", conn)
 
         Dim da As New OleDbDataAdapter
         Dim dt As New DataTable
@@ -91,9 +97,15 @@ Public Class StudentRegistrationForm
         dt.Clear()
         da.Fill(dt)
         SubjectListGridView.DataSource = dt
+
+        SubjectListGridView.Columns(0).HeaderText = "Subject Code"
+        SubjectListGridView.Columns(1).HeaderText = "Subject Name"
+        SubjectListGridView.Columns(2).HeaderText = "Matric No"
+        SubjectListGridView.Columns(3).HeaderText = "Name"
+
     End Sub
 
-    'PRINT SUBJECT LIST BY CODE
+    'PRINT STUDENT LIST BY CODE
     Private Sub PrintSubjectListButton_Click(sender As Object, e As EventArgs) Handles PrintSubjectListButton.Click
         PrintPreviewDialog2.Document = PrintDocument2
         PrintPreviewDialog2.PrintPreviewControl.Zoom = 1
@@ -114,6 +126,7 @@ Public Class StudentRegistrationForm
     Private Sub clearStudentSubjectGrid()
         Me.ds.Clear()
     End Sub
+
 
 
 End Class
