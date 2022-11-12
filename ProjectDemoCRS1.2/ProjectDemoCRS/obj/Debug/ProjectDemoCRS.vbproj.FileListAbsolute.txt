@@ -172,3 +172,4 @@ C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.
 C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS1.2.xml
 C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS1.2.pdb
 C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentRegistrationForm.resources
+C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.EmailStudentSlip.resources

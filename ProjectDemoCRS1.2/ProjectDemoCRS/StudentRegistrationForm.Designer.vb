@@ -24,22 +24,26 @@ Partial Class StudentRegistrationForm
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StudentRegistrationForm))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.StudentRegDataGridView = New System.Windows.Forms.DataGridView()
-        Me.PrintStudentSlipButton = New System.Windows.Forms.Button()
+        Me.ViewMatricNoButton = New System.Windows.Forms.Button()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.ViewMatricNoTextBox = New System.Windows.Forms.TextBox()
         Me.EmailStudentSlipButton = New System.Windows.Forms.Button()
+        Me.PrintStudentSlipButton = New System.Windows.Forms.Button()
+        Me.StudentRegDataGridView = New System.Windows.Forms.DataGridView()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.SubjectCodeTextBox = New System.Windows.Forms.TextBox()
+        Me.ViewSubjectCodeButton = New System.Windows.Forms.Button()
         Me.PrintSubjectListButton = New System.Windows.Forms.Button()
         Me.SubjectListGridView = New System.Windows.Forms.DataGridView()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.PrintDocument2 = New System.Drawing.Printing.PrintDocument()
         Me.PrintPreviewDialog2 = New System.Windows.Forms.PrintPreviewDialog()
-        Me.ViewMatricNoTextBox = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.ViewMatricNoButton = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.TotalCreditLabel = New System.Windows.Forms.Label()
+        Me.FeeAmountLabel = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.StudentRegDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -48,6 +52,10 @@ Partial Class StudentRegistrationForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.FeeAmountLabel)
+        Me.GroupBox1.Controls.Add(Me.TotalCreditLabel)
+        Me.GroupBox1.Controls.Add(Me.Label4)
+        Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Controls.Add(Me.ViewMatricNoButton)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.ViewMatricNoTextBox)
@@ -56,42 +64,67 @@ Partial Class StudentRegistrationForm
         Me.GroupBox1.Controls.Add(Me.StudentRegDataGridView)
         Me.GroupBox1.Location = New System.Drawing.Point(12, 12)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(678, 266)
+        Me.GroupBox1.Size = New System.Drawing.Size(678, 300)
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Student Registration"
         '
-        'StudentRegDataGridView
+        'ViewMatricNoButton
         '
-        Me.StudentRegDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.StudentRegDataGridView.Location = New System.Drawing.Point(16, 60)
-        Me.StudentRegDataGridView.Name = "StudentRegDataGridView"
-        Me.StudentRegDataGridView.Size = New System.Drawing.Size(656, 133)
-        Me.StudentRegDataGridView.TabIndex = 0
+        Me.ViewMatricNoButton.Location = New System.Drawing.Point(442, 16)
+        Me.ViewMatricNoButton.Name = "ViewMatricNoButton"
+        Me.ViewMatricNoButton.Size = New System.Drawing.Size(116, 32)
+        Me.ViewMatricNoButton.TabIndex = 5
+        Me.ViewMatricNoButton.Text = "View"
+        Me.ViewMatricNoButton.UseVisualStyleBackColor = True
         '
-        'PrintStudentSlipButton
+        'Label2
         '
-        Me.PrintStudentSlipButton.Location = New System.Drawing.Point(107, 213)
-        Me.PrintStudentSlipButton.Name = "PrintStudentSlipButton"
-        Me.PrintStudentSlipButton.Size = New System.Drawing.Size(116, 32)
-        Me.PrintStudentSlipButton.TabIndex = 1
-        Me.PrintStudentSlipButton.Text = "Print Student Slip"
-        Me.PrintStudentSlipButton.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(115, 29)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(121, 13)
+        Me.Label2.TabIndex = 5
+        Me.Label2.Text = "Enter Student Matric No"
+        '
+        'ViewMatricNoTextBox
+        '
+        Me.ViewMatricNoTextBox.Location = New System.Drawing.Point(253, 23)
+        Me.ViewMatricNoTextBox.Name = "ViewMatricNoTextBox"
+        Me.ViewMatricNoTextBox.Size = New System.Drawing.Size(151, 20)
+        Me.ViewMatricNoTextBox.TabIndex = 5
         '
         'EmailStudentSlipButton
         '
-        Me.EmailStudentSlipButton.Location = New System.Drawing.Point(442, 213)
+        Me.EmailStudentSlipButton.Location = New System.Drawing.Point(556, 244)
         Me.EmailStudentSlipButton.Name = "EmailStudentSlipButton"
         Me.EmailStudentSlipButton.Size = New System.Drawing.Size(116, 32)
         Me.EmailStudentSlipButton.TabIndex = 2
         Me.EmailStudentSlipButton.Text = "Email Student Slip"
         Me.EmailStudentSlipButton.UseVisualStyleBackColor = True
         '
+        'PrintStudentSlipButton
+        '
+        Me.PrintStudentSlipButton.Location = New System.Drawing.Point(420, 244)
+        Me.PrintStudentSlipButton.Name = "PrintStudentSlipButton"
+        Me.PrintStudentSlipButton.Size = New System.Drawing.Size(116, 32)
+        Me.PrintStudentSlipButton.TabIndex = 1
+        Me.PrintStudentSlipButton.Text = "Print Student Slip"
+        Me.PrintStudentSlipButton.UseVisualStyleBackColor = True
+        '
+        'StudentRegDataGridView
+        '
+        Me.StudentRegDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.StudentRegDataGridView.Location = New System.Drawing.Point(16, 60)
+        Me.StudentRegDataGridView.Name = "StudentRegDataGridView"
+        Me.StudentRegDataGridView.Size = New System.Drawing.Size(656, 178)
+        Me.StudentRegDataGridView.TabIndex = 0
+        '
         'GroupBox2
         '
         Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Controls.Add(Me.TextBox1)
-        Me.GroupBox2.Controls.Add(Me.Button3)
+        Me.GroupBox2.Controls.Add(Me.SubjectCodeTextBox)
+        Me.GroupBox2.Controls.Add(Me.ViewSubjectCodeButton)
         Me.GroupBox2.Controls.Add(Me.PrintSubjectListButton)
         Me.GroupBox2.Controls.Add(Me.SubjectListGridView)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 330)
@@ -101,18 +134,34 @@ Partial Class StudentRegistrationForm
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Subject List"
         '
-        'Button3
+        'Label1
         '
-        Me.Button3.Location = New System.Drawing.Point(442, 52)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(116, 32)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "View"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(137, 26)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(99, 13)
+        Me.Label1.TabIndex = 4
+        Me.Label1.Text = "Enter Subject Code"
+        '
+        'SubjectCodeTextBox
+        '
+        Me.SubjectCodeTextBox.Location = New System.Drawing.Point(253, 19)
+        Me.SubjectCodeTextBox.Name = "SubjectCodeTextBox"
+        Me.SubjectCodeTextBox.Size = New System.Drawing.Size(151, 20)
+        Me.SubjectCodeTextBox.TabIndex = 3
+        '
+        'ViewSubjectCodeButton
+        '
+        Me.ViewSubjectCodeButton.Location = New System.Drawing.Point(442, 12)
+        Me.ViewSubjectCodeButton.Name = "ViewSubjectCodeButton"
+        Me.ViewSubjectCodeButton.Size = New System.Drawing.Size(116, 32)
+        Me.ViewSubjectCodeButton.TabIndex = 2
+        Me.ViewSubjectCodeButton.Text = "View"
+        Me.ViewSubjectCodeButton.UseVisualStyleBackColor = True
         '
         'PrintSubjectListButton
         '
-        Me.PrintSubjectListButton.Location = New System.Drawing.Point(275, 242)
+        Me.PrintSubjectListButton.Location = New System.Drawing.Point(556, 242)
         Me.PrintSubjectListButton.Name = "PrintSubjectListButton"
         Me.PrintSubjectListButton.Size = New System.Drawing.Size(116, 32)
         Me.PrintSubjectListButton.TabIndex = 1
@@ -122,26 +171,10 @@ Partial Class StudentRegistrationForm
         'SubjectListGridView
         '
         Me.SubjectListGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.SubjectListGridView.Location = New System.Drawing.Point(16, 99)
+        Me.SubjectListGridView.Location = New System.Drawing.Point(16, 50)
         Me.SubjectListGridView.Name = "SubjectListGridView"
-        Me.SubjectListGridView.Size = New System.Drawing.Size(656, 128)
+        Me.SubjectListGridView.Size = New System.Drawing.Size(656, 177)
         Me.SubjectListGridView.TabIndex = 0
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Location = New System.Drawing.Point(253, 59)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(151, 20)
-        Me.TextBox1.TabIndex = 3
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(137, 62)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(99, 13)
-        Me.Label1.TabIndex = 4
-        Me.Label1.Text = "Enter Subject Code"
         '
         'PrintDocument1
         '
@@ -156,6 +189,9 @@ Partial Class StudentRegistrationForm
         Me.PrintPreviewDialog1.Name = "PrintPreviewDialog1"
         Me.PrintPreviewDialog1.Visible = False
         '
+        'PrintDocument2
+        '
+        '
         'PrintPreviewDialog2
         '
         Me.PrintPreviewDialog2.AutoScrollMargin = New System.Drawing.Size(0, 0)
@@ -166,30 +202,39 @@ Partial Class StudentRegistrationForm
         Me.PrintPreviewDialog2.Name = "PrintPreviewDialog2"
         Me.PrintPreviewDialog2.Visible = False
         '
-        'ViewMatricNoTextBox
+        'Label3
         '
-        Me.ViewMatricNoTextBox.Location = New System.Drawing.Point(253, 23)
-        Me.ViewMatricNoTextBox.Name = "ViewMatricNoTextBox"
-        Me.ViewMatricNoTextBox.Size = New System.Drawing.Size(151, 20)
-        Me.ViewMatricNoTextBox.TabIndex = 5
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(129, 247)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(61, 13)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "Total Credit"
         '
-        'Label2
+        'Label4
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(115, 29)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(121, 13)
-        Me.Label2.TabIndex = 5
-        Me.Label2.Text = "Enter Student Matric No"
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(126, 273)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(64, 13)
+        Me.Label4.TabIndex = 9
+        Me.Label4.Text = "Fee Amount"
         '
-        'ViewMatricNoButton
+        'TotalCreditLabel
         '
-        Me.ViewMatricNoButton.Location = New System.Drawing.Point(442, 16)
-        Me.ViewMatricNoButton.Name = "ViewMatricNoButton"
-        Me.ViewMatricNoButton.Size = New System.Drawing.Size(116, 32)
-        Me.ViewMatricNoButton.TabIndex = 5
-        Me.ViewMatricNoButton.Text = "View"
-        Me.ViewMatricNoButton.UseVisualStyleBackColor = True
+        Me.TotalCreditLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TotalCreditLabel.Location = New System.Drawing.Point(253, 247)
+        Me.TotalCreditLabel.Name = "TotalCreditLabel"
+        Me.TotalCreditLabel.Size = New System.Drawing.Size(151, 20)
+        Me.TotalCreditLabel.TabIndex = 10
+        '
+        'FeeAmountLabel
+        '
+        Me.FeeAmountLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.FeeAmountLabel.Location = New System.Drawing.Point(253, 272)
+        Me.FeeAmountLabel.Name = "FeeAmountLabel"
+        Me.FeeAmountLabel.Size = New System.Drawing.Size(151, 20)
+        Me.FeeAmountLabel.TabIndex = 11
         '
         'StudentRegistrationForm
         '
@@ -216,8 +261,8 @@ Partial Class StudentRegistrationForm
     Friend WithEvents PrintStudentSlipButton As Button
     Friend WithEvents GroupBox2 As GroupBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Button3 As Button
+    Friend WithEvents SubjectCodeTextBox As TextBox
+    Friend WithEvents ViewSubjectCodeButton As Button
     Friend WithEvents PrintSubjectListButton As Button
     Friend WithEvents SubjectListGridView As DataGridView
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
@@ -227,4 +272,8 @@ Partial Class StudentRegistrationForm
     Friend WithEvents Label2 As Label
     Friend WithEvents ViewMatricNoTextBox As TextBox
     Friend WithEvents ViewMatricNoButton As Button
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Label3 As Label
+    Friend WithEvents TotalCreditLabel As Label
+    Friend WithEvents FeeAmountLabel As Label
 End Class

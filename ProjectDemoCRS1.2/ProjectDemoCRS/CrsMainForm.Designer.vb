@@ -40,11 +40,9 @@ Partial Class CrsMainForm
         Me.SubjectListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrationInformationStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentRegistrationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StaffReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AbutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StudentReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -92,19 +90,19 @@ Partial Class CrsMainForm
         'TeacherInformationToolStripMenuItem
         '
         Me.TeacherInformationToolStripMenuItem.Name = "TeacherInformationToolStripMenuItem"
-        Me.TeacherInformationToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.TeacherInformationToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.TeacherInformationToolStripMenuItem.Text = "Class List"
         '
         'StafInformationToolStripMenuItem
         '
         Me.StafInformationToolStripMenuItem.Name = "StafInformationToolStripMenuItem"
-        Me.StafInformationToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StafInformationToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.StafInformationToolStripMenuItem.Text = "Assign Teacher"
         '
         'StudentInformationToolStripMenuItem
         '
         Me.StudentInformationToolStripMenuItem.Name = "StudentInformationToolStripMenuItem"
-        Me.StudentInformationToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StudentInformationToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.StudentInformationToolStripMenuItem.Text = "Enrol Student"
         '
         'ToolStripMenuItem1
@@ -117,19 +115,19 @@ Partial Class CrsMainForm
         'FindStaffTeacherToolStripMenuItem
         '
         Me.FindStaffTeacherToolStripMenuItem.Name = "FindStaffTeacherToolStripMenuItem"
-        Me.FindStaffTeacherToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.FindStaffTeacherToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
         Me.FindStaffTeacherToolStripMenuItem.Text = "Find Staff/Teacher"
         '
         'AddStaffToolStripMenuItem
         '
         Me.AddStaffToolStripMenuItem.Name = "AddStaffToolStripMenuItem"
-        Me.AddStaffToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AddStaffToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
         Me.AddStaffToolStripMenuItem.Text = "Add Staff"
         '
         'AddTeacherToolStripMenuItem
         '
         Me.AddTeacherToolStripMenuItem.Name = "AddTeacherToolStripMenuItem"
-        Me.AddTeacherToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AddTeacherToolStripMenuItem.Size = New System.Drawing.Size(169, 22)
         Me.AddTeacherToolStripMenuItem.Text = "Add Teacher"
         '
         'ToolStripMenuItem2
@@ -142,7 +140,7 @@ Partial Class CrsMainForm
         'StudentListToolStripMenuItem
         '
         Me.StudentListToolStripMenuItem.Name = "StudentListToolStripMenuItem"
-        Me.StudentListToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.StudentListToolStripMenuItem.Size = New System.Drawing.Size(136, 22)
         Me.StudentListToolStripMenuItem.Text = "Student List"
         '
         'SubjectInformationToolStripMenuItem
@@ -155,12 +153,12 @@ Partial Class CrsMainForm
         'SubjectListToolStripMenuItem
         '
         Me.SubjectListToolStripMenuItem.Name = "SubjectListToolStripMenuItem"
-        Me.SubjectListToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.SubjectListToolStripMenuItem.Size = New System.Drawing.Size(134, 22)
         Me.SubjectListToolStripMenuItem.Text = "Subject List"
         '
         'RegistrationInformationStripMenuItem
         '
-        Me.RegistrationInformationStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StudentRegistrationToolStripMenuItem, Me.StaffReportToolStripMenuItem, Me.StudentReportToolStripMenuItem})
+        Me.RegistrationInformationStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StudentRegistrationToolStripMenuItem})
         Me.RegistrationInformationStripMenuItem.Name = "RegistrationInformationStripMenuItem"
         Me.RegistrationInformationStripMenuItem.Size = New System.Drawing.Size(148, 22)
         Me.RegistrationInformationStripMenuItem.Text = "Registration Information"
@@ -170,13 +168,6 @@ Partial Class CrsMainForm
         Me.StudentRegistrationToolStripMenuItem.Name = "StudentRegistrationToolStripMenuItem"
         Me.StudentRegistrationToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
         Me.StudentRegistrationToolStripMenuItem.Text = "Student Registration"
-        '
-        'StaffReportToolStripMenuItem
-        '
-        Me.StaffReportToolStripMenuItem.Name = "StaffReportToolStripMenuItem"
-        Me.StaffReportToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
-        Me.StaffReportToolStripMenuItem.Text = "Staff Report"
-        Me.StaffReportToolStripMenuItem.TextAlign = System.Drawing.ContentAlignment.BottomLeft
         '
         'HelpToolStripMenuItem
         '
@@ -188,20 +179,14 @@ Partial Class CrsMainForm
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
         Me.AboutToolStripMenuItem.Text = "Search"
         '
         'AbutToolStripMenuItem
         '
         Me.AbutToolStripMenuItem.Name = "AbutToolStripMenuItem"
-        Me.AbutToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.AbutToolStripMenuItem.Size = New System.Drawing.Size(109, 22)
         Me.AbutToolStripMenuItem.Text = "About"
-        '
-        'StudentReportToolStripMenuItem
-        '
-        Me.StudentReportToolStripMenuItem.Name = "StudentReportToolStripMenuItem"
-        Me.StudentReportToolStripMenuItem.Size = New System.Drawing.Size(181, 22)
-        Me.StudentReportToolStripMenuItem.Text = "Student Report"
         '
         'CrsMainForm
         '
@@ -230,7 +215,6 @@ Partial Class CrsMainForm
     Friend WithEvents StudentInformationToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistrationInformationStripMenuItem As ToolStripMenuItem
     Friend WithEvents StudentRegistrationToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents StaffReportToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AbutToolStripMenuItem As ToolStripMenuItem
@@ -242,5 +226,4 @@ Partial Class CrsMainForm
     Friend WithEvents StudentListToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SubjectInformationToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents SubjectListToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents StudentReportToolStripMenuItem As ToolStripMenuItem
 End Class

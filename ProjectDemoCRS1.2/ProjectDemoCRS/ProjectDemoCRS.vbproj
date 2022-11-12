@@ -80,6 +80,12 @@
     <Compile Include="CrsMainForm.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="EmailStudentSlip.Designer.vb">
+      <DependentUpon>EmailStudentSlip.vb</DependentUpon>
+    </Compile>
+    <Compile Include="EmailStudentSlip.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login\LoginForm.Designer.vb">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </Compile>
@@ -173,6 +179,9 @@
   <ItemGroup>
     <EmbeddedResource Include="CrsMainForm.resx">
       <DependentUpon>CrsMainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EmailStudentSlip.resx">
+      <DependentUpon>EmailStudentSlip.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
