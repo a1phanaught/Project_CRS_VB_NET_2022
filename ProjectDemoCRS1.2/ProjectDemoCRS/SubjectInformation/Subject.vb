@@ -72,6 +72,7 @@ Public Class Subjectinfo
             sqlString = "update subject set subjectCode = '" & newSubjectRec.subjectcode & "',"
             sqlString = sqlString & " subjectName = '" & newSubjectRec.subjectname & "',"
             sqlString = sqlString & " credit = '" & newSubjectRec.subjectcredit & "'"
+            sqlString = sqlString & " where subjectCode = '" & oldSubjectRec.subjectcode & "'"
 
             MessageBox.Show(sqlString)
             Dim cmd As New OleDbCommand(sqlString, con)

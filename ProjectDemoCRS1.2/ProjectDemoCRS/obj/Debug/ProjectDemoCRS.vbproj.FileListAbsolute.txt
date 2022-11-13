@@ -178,3 +178,4 @@ C:\Users\User\Desktop\UniSem5\vb\project\Project_CRS_VB_NET_2022\ProjectDemoCRS1
 C:\Users\User\Desktop\UniSem5\vb\project\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.ResetPasswordForm.resources
 C:\Users\User\Desktop\UniSem5\vb\project\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.UserListForm.resources
 C:\Users\User\Desktop\UniSem5\vb\project\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.UserForm.resources
+C:\Users\User\Desktop\UniSem5\vb\project\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentGradeForm.resources

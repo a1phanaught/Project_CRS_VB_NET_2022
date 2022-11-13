@@ -61,4 +61,8 @@
     Private Sub AddTeacherToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddTeacherToolStripMenuItem.Click
         TeacherForm.ShowDialog()
     End Sub
+
+    Private Sub SubmitGradeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SubmitGradeToolStripMenuItem.Click
+        StudentGradeForm.ShowDialog()
+    End Sub
 End Class
