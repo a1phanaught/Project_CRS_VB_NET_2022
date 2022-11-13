@@ -38,7 +38,18 @@
 
         ' Users' data can only be accessed by a staff with access level 'S'
         If friendAccessLevel = "S" Then
+            RegistrarToolStripMenuItem.Enabled = True
+            ToolStripMenuItem1.Enabled = True
+            StudentListToolStripMenuItem.Enabled = True
+            SubjectInformationToolStripMenuItem.Enabled = True
+            RegistrationInformationStripMenuItem.Enabled = True
             ToolStripMenuItem3.Enabled = True
+        ElseIf friendAccessLevel = "R" Then
+            RegistrarToolStripMenuItem.Enabled = True
+            ToolStripMenuItem1.Enabled = True
+            StudentListToolStripMenuItem.Enabled = True
+            SubjectInformationToolStripMenuItem.Enabled = True
+            RegistrationInformationStripMenuItem.Enabled = True
         End If
     End Sub
 

@@ -66,7 +66,7 @@ Partial Class UserForm
         'UserLevelComboBox
         '
         Me.UserLevelComboBox.FormattingEnabled = True
-        Me.UserLevelComboBox.Items.AddRange(New Object() {"R", "S"})
+        Me.UserLevelComboBox.Items.AddRange(New Object() {"T", "R", "S"})
         Me.UserLevelComboBox.Location = New System.Drawing.Point(83, 304)
         Me.UserLevelComboBox.Name = "UserLevelComboBox"
         Me.UserLevelComboBox.Size = New System.Drawing.Size(121, 24)

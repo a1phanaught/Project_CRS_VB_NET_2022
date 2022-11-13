@@ -28,8 +28,6 @@ Partial Class CrsMainForm
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.TeacherInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StafInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.StudentInformationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
         Me.FindStaffTeacherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AddTeacherToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -88,7 +86,8 @@ Partial Class CrsMainForm
         '
         'RegistrarToolStripMenuItem
         '
-        Me.RegistrarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TeacherInformationToolStripMenuItem, Me.StafInformationToolStripMenuItem, Me.StudentInformationToolStripMenuItem})
+        Me.RegistrarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TeacherInformationToolStripMenuItem})
+        Me.RegistrarToolStripMenuItem.Enabled = False
         Me.RegistrarToolStripMenuItem.Name = "RegistrarToolStripMenuItem"
         Me.RegistrarToolStripMenuItem.Size = New System.Drawing.Size(82, 24)
         Me.RegistrarToolStripMenuItem.Text = "Registrar"
@@ -96,24 +95,13 @@ Partial Class CrsMainForm
         'TeacherInformationToolStripMenuItem
         '
         Me.TeacherInformationToolStripMenuItem.Name = "TeacherInformationToolStripMenuItem"
-        Me.TeacherInformationToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.TeacherInformationToolStripMenuItem.Size = New System.Drawing.Size(190, 26)
         Me.TeacherInformationToolStripMenuItem.Text = "Class List"
-        '
-        'StafInformationToolStripMenuItem
-        '
-        Me.StafInformationToolStripMenuItem.Name = "StafInformationToolStripMenuItem"
-        Me.StafInformationToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.StafInformationToolStripMenuItem.Text = "Assign Teacher"
-        '
-        'StudentInformationToolStripMenuItem
-        '
-        Me.StudentInformationToolStripMenuItem.Name = "StudentInformationToolStripMenuItem"
-        Me.StudentInformationToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
-        Me.StudentInformationToolStripMenuItem.Text = "Enrol Student"
         '
         'ToolStripMenuItem1
         '
         Me.ToolStripMenuItem1.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FindStaffTeacherToolStripMenuItem, Me.AddTeacherToolStripMenuItem})
+        Me.ToolStripMenuItem1.Enabled = False
         Me.ToolStripMenuItem1.Name = "ToolStripMenuItem1"
         Me.ToolStripMenuItem1.Size = New System.Drawing.Size(138, 24)
         Me.ToolStripMenuItem1.Text = "Staff and Teacher"
@@ -121,13 +109,13 @@ Partial Class CrsMainForm
         'FindStaffTeacherToolStripMenuItem
         '
         Me.FindStaffTeacherToolStripMenuItem.Name = "FindStaffTeacherToolStripMenuItem"
-        Me.FindStaffTeacherToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.FindStaffTeacherToolStripMenuItem.Size = New System.Drawing.Size(212, 26)
         Me.FindStaffTeacherToolStripMenuItem.Text = "Find Staff/Teacher"
         '
         'AddTeacherToolStripMenuItem
         '
         Me.AddTeacherToolStripMenuItem.Name = "AddTeacherToolStripMenuItem"
-        Me.AddTeacherToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.AddTeacherToolStripMenuItem.Size = New System.Drawing.Size(212, 26)
         Me.AddTeacherToolStripMenuItem.Text = "Add Teacher"
         '
         'ToolStripMenuItem2
@@ -139,12 +127,14 @@ Partial Class CrsMainForm
         '
         'StudentListToolStripMenuItem
         '
+        Me.StudentListToolStripMenuItem.Enabled = False
         Me.StudentListToolStripMenuItem.Name = "StudentListToolStripMenuItem"
         Me.StudentListToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.StudentListToolStripMenuItem.Text = "Student List"
         '
         'SubmitGradeToolStripMenuItem
         '
+        Me.SubmitGradeToolStripMenuItem.Enabled = False
         Me.SubmitGradeToolStripMenuItem.Name = "SubmitGradeToolStripMenuItem"
         Me.SubmitGradeToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.SubmitGradeToolStripMenuItem.Text = "Submit Grade"
@@ -152,6 +142,7 @@ Partial Class CrsMainForm
         'SubjectInformationToolStripMenuItem
         '
         Me.SubjectInformationToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SubjectListToolStripMenuItem})
+        Me.SubjectInformationToolStripMenuItem.Enabled = False
         Me.SubjectInformationToolStripMenuItem.Name = "SubjectInformationToolStripMenuItem"
         Me.SubjectInformationToolStripMenuItem.Size = New System.Drawing.Size(154, 24)
         Me.SubjectInformationToolStripMenuItem.Text = "Subject Information"
@@ -165,6 +156,7 @@ Partial Class CrsMainForm
         'RegistrationInformationStripMenuItem
         '
         Me.RegistrationInformationStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.StudentRegistrationToolStripMenuItem})
+        Me.RegistrationInformationStripMenuItem.Enabled = False
         Me.RegistrationInformationStripMenuItem.Name = "RegistrationInformationStripMenuItem"
         Me.RegistrationInformationStripMenuItem.Size = New System.Drawing.Size(185, 24)
         Me.RegistrationInformationStripMenuItem.Text = "Registration Information"
@@ -273,8 +265,6 @@ Partial Class CrsMainForm
     Friend WithEvents LogoutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistrarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents TeacherInformationToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents StafInformationToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents StudentInformationToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistrationInformationStripMenuItem As ToolStripMenuItem
     Friend WithEvents StudentRegistrationToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
