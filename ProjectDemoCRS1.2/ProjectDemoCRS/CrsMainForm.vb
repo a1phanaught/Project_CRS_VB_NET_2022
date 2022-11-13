@@ -1,4 +1,6 @@
 ﻿Public Class CrsMainForm
+
+    Friend friendUsername As String
     Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
         End
     End Sub
@@ -27,5 +29,13 @@
     'Taufiq edit StudentRegistration
     Private Sub StudentRegistrationToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles StudentRegistrationToolStripMenuItem.Click
         StudentRegistrationForm.ShowDialog()
+    End Sub
+
+    Private Sub CrsMainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        GreetingsLabel.Text = "Welcome, " & friendUsername & "!"
+    End Sub
+
+    Private Sub ResetPassButton_Click(sender As Object, e As EventArgs) Handles ResetPassButton.Click
+        ResetPasswordForm.ShowDialog()
     End Sub
 End Class

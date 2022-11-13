@@ -28,6 +28,8 @@ Public Class LoginModel
 
         If dr.HasRows Then
             MessageBox.Show("Login Successful!")
+            dr.Read()
+            CrsMainForm.friendUsername = dr("userName")
             conn.Close()
             Return True
         End If
