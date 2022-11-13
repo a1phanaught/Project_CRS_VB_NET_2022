@@ -24,6 +24,10 @@ Partial Class StudentRegistrationForm
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(StudentRegistrationForm))
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.FeeAmountLabel = New System.Windows.Forms.Label()
+        Me.TotalCreditLabel = New System.Windows.Forms.Label()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.ViewMatricNoButton = New System.Windows.Forms.Button()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ViewMatricNoTextBox = New System.Windows.Forms.TextBox()
@@ -40,10 +44,6 @@ Partial Class StudentRegistrationForm
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.PrintDocument2 = New System.Drawing.Printing.PrintDocument()
         Me.PrintPreviewDialog2 = New System.Windows.Forms.PrintPreviewDialog()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TotalCreditLabel = New System.Windows.Forms.Label()
-        Me.FeeAmountLabel = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         CType(Me.StudentRegDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -68,6 +68,40 @@ Partial Class StudentRegistrationForm
         Me.GroupBox1.TabIndex = 0
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Student Registration"
+        '
+        'FeeAmountLabel
+        '
+        Me.FeeAmountLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.FeeAmountLabel.Location = New System.Drawing.Point(253, 272)
+        Me.FeeAmountLabel.Name = "FeeAmountLabel"
+        Me.FeeAmountLabel.Size = New System.Drawing.Size(151, 20)
+        Me.FeeAmountLabel.TabIndex = 11
+        '
+        'TotalCreditLabel
+        '
+        Me.TotalCreditLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TotalCreditLabel.Location = New System.Drawing.Point(253, 247)
+        Me.TotalCreditLabel.Name = "TotalCreditLabel"
+        Me.TotalCreditLabel.Size = New System.Drawing.Size(151, 20)
+        Me.TotalCreditLabel.TabIndex = 10
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(126, 273)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(64, 13)
+        Me.Label4.TabIndex = 9
+        Me.Label4.Text = "Fee Amount"
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(129, 247)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(61, 13)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "Total Credit"
         '
         'ViewMatricNoButton
         '
@@ -201,40 +235,6 @@ Partial Class StudentRegistrationForm
         Me.PrintPreviewDialog2.Icon = CType(resources.GetObject("PrintPreviewDialog2.Icon"), System.Drawing.Icon)
         Me.PrintPreviewDialog2.Name = "PrintPreviewDialog2"
         Me.PrintPreviewDialog2.Visible = False
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(129, 247)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(61, 13)
-        Me.Label3.TabIndex = 8
-        Me.Label3.Text = "Total Credit"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(126, 273)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(64, 13)
-        Me.Label4.TabIndex = 9
-        Me.Label4.Text = "Fee Amount"
-        '
-        'TotalCreditLabel
-        '
-        Me.TotalCreditLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TotalCreditLabel.Location = New System.Drawing.Point(253, 247)
-        Me.TotalCreditLabel.Name = "TotalCreditLabel"
-        Me.TotalCreditLabel.Size = New System.Drawing.Size(151, 20)
-        Me.TotalCreditLabel.TabIndex = 10
-        '
-        'FeeAmountLabel
-        '
-        Me.FeeAmountLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.FeeAmountLabel.Location = New System.Drawing.Point(253, 272)
-        Me.FeeAmountLabel.Name = "FeeAmountLabel"
-        Me.FeeAmountLabel.Size = New System.Drawing.Size(151, 20)
-        Me.FeeAmountLabel.TabIndex = 11
         '
         'StudentRegistrationForm
         '
