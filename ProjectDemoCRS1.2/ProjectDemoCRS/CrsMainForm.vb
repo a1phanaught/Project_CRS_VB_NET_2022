@@ -53,4 +53,12 @@
     Private Sub UserListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UserListToolStripMenuItem.Click
         UserListForm.ShowDialog()
     End Sub
+
+    Private Sub AssignUserToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AssignUserToolStripMenuItem.Click
+        UserForm.ShowDialog()
+    End Sub
+
+    Private Sub AddTeacherToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AddTeacherToolStripMenuItem.Click
+        TeacherForm.ShowDialog()
+    End Sub
 End Class
