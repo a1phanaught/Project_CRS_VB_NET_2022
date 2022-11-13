@@ -99,7 +99,20 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login\LoginModel.vb" />
+    <Compile Include="Login\User.vb" />
     <Compile Include="Login\UserClass.vb" />
+    <Compile Include="Login\UserForm.Designer.vb">
+      <DependentUpon>UserForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\UserForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login\UserListForm.Designer.vb">
+      <DependentUpon>UserListForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login\UserListForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -194,6 +207,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login\ResetPasswordForm.resx">
       <DependentUpon>ResetPasswordForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\UserForm.resx">
+      <DependentUpon>UserForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login\UserListForm.resx">
+      <DependentUpon>UserListForm.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>

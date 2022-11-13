@@ -1,6 +1,7 @@
 ﻿Public Class CrsMainForm
 
     Friend friendUsername As String
+    Friend friendAccessLevel As String
     Private Sub LogoutToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LogoutToolStripMenuItem.Click
         End
     End Sub
@@ -33,9 +34,23 @@
 
     Private Sub CrsMainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         GreetingsLabel.Text = "Welcome, " & friendUsername & "!"
+        AccessLabel.Text = "Access Level: " & friendAccessLevel
+
+        ' Users' data can only be accessed by a staff with access level 'S'
+        If friendAccessLevel = "S" Then
+            ToolStripMenuItem3.Enabled = True
+        End If
     End Sub
 
     Private Sub ResetPassButton_Click(sender As Object, e As EventArgs) Handles ResetPassButton.Click
         ResetPasswordForm.ShowDialog()
+    End Sub
+
+    Private Sub ToolStripMenuItem3_Click(sender As Object, e As EventArgs) Handles ToolStripMenuItem3.Click
+
+    End Sub
+
+    Private Sub UserListToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles UserListToolStripMenuItem.Click
+        UserListForm.ShowDialog()
     End Sub
 End Class

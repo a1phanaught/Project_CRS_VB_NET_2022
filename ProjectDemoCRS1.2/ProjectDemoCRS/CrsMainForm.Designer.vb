@@ -40,32 +40,36 @@ Partial Class CrsMainForm
         Me.SubjectListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrationInformationStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StudentRegistrationToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UserListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AssignUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AbutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResetPassButton = New System.Windows.Forms.Button()
         Me.GreetingsLabel = New System.Windows.Forms.Label()
+        Me.AccessLabel = New System.Windows.Forms.Label()
         Me.MenuStrip2.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
         '
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 26)
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 30)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 1, 0, 1)
-        Me.MenuStrip1.Size = New System.Drawing.Size(1067, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1067, 30)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'MenuStrip2
         '
         Me.MenuStrip2.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ApplicationToolStripMenuItem, Me.RegistrarToolStripMenuItem, Me.ToolStripMenuItem1, Me.ToolStripMenuItem2, Me.SubjectInformationToolStripMenuItem, Me.RegistrationInformationStripMenuItem, Me.HelpToolStripMenuItem})
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ApplicationToolStripMenuItem, Me.RegistrarToolStripMenuItem, Me.ToolStripMenuItem1, Me.ToolStripMenuItem2, Me.SubjectInformationToolStripMenuItem, Me.RegistrationInformationStripMenuItem, Me.ToolStripMenuItem3, Me.HelpToolStripMenuItem})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip2.Name = "MenuStrip2"
         Me.MenuStrip2.Padding = New System.Windows.Forms.Padding(7, 1, 0, 1)
-        Me.MenuStrip2.Size = New System.Drawing.Size(1067, 26)
+        Me.MenuStrip2.Size = New System.Drawing.Size(1067, 30)
         Me.MenuStrip2.TabIndex = 1
         Me.MenuStrip2.Text = "MenuStrip2"
         '
@@ -171,6 +175,26 @@ Partial Class CrsMainForm
         Me.StudentRegistrationToolStripMenuItem.Size = New System.Drawing.Size(227, 26)
         Me.StudentRegistrationToolStripMenuItem.Text = "Student Registration"
         '
+        'ToolStripMenuItem3
+        '
+        Me.ToolStripMenuItem3.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UserListToolStripMenuItem, Me.AssignUserToolStripMenuItem})
+        Me.ToolStripMenuItem3.Enabled = False
+        Me.ToolStripMenuItem3.Name = "ToolStripMenuItem3"
+        Me.ToolStripMenuItem3.Size = New System.Drawing.Size(58, 24)
+        Me.ToolStripMenuItem3.Text = "Users"
+        '
+        'UserListToolStripMenuItem
+        '
+        Me.UserListToolStripMenuItem.Name = "UserListToolStripMenuItem"
+        Me.UserListToolStripMenuItem.Size = New System.Drawing.Size(168, 26)
+        Me.UserListToolStripMenuItem.Text = "User List"
+        '
+        'AssignUserToolStripMenuItem
+        '
+        Me.AssignUserToolStripMenuItem.Name = "AssignUserToolStripMenuItem"
+        Me.AssignUserToolStripMenuItem.Size = New System.Drawing.Size(168, 26)
+        Me.AssignUserToolStripMenuItem.Text = "Assign User"
+        '
         'HelpToolStripMenuItem
         '
         Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.AbutToolStripMenuItem})
@@ -192,7 +216,8 @@ Partial Class CrsMainForm
         '
         'ResetPassButton
         '
-        Me.ResetPassButton.Location = New System.Drawing.Point(453, 378)
+        Me.ResetPassButton.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ResetPassButton.Location = New System.Drawing.Point(460, 378)
         Me.ResetPassButton.Name = "ResetPassButton"
         Me.ResetPassButton.Size = New System.Drawing.Size(140, 41)
         Me.ResetPassButton.TabIndex = 2
@@ -210,11 +235,23 @@ Partial Class CrsMainForm
         Me.GreetingsLabel.Text = "Label1"
         Me.GreetingsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'AccessLabel
+        '
+        Me.AccessLabel.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.AccessLabel.AutoSize = True
+        Me.AccessLabel.Location = New System.Drawing.Point(918, 82)
+        Me.AccessLabel.Name = "AccessLabel"
+        Me.AccessLabel.Size = New System.Drawing.Size(48, 16)
+        Me.AccessLabel.TabIndex = 4
+        Me.AccessLabel.Text = "Label1"
+        Me.AccessLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
         'CrsMainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1067, 554)
+        Me.Controls.Add(Me.AccessLabel)
         Me.Controls.Add(Me.GreetingsLabel)
         Me.Controls.Add(Me.ResetPassButton)
         Me.Controls.Add(Me.MenuStrip1)
@@ -253,4 +290,8 @@ Partial Class CrsMainForm
     Friend WithEvents SubjectListToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ResetPassButton As Button
     Friend WithEvents GreetingsLabel As Label
+    Friend WithEvents ToolStripMenuItem3 As ToolStripMenuItem
+    Friend WithEvents UserListToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AssignUserToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents AccessLabel As Label
 End Class

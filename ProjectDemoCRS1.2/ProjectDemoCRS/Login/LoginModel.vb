@@ -30,6 +30,7 @@ Public Class LoginModel
             MessageBox.Show("Login Successful!")
             dr.Read()
             CrsMainForm.friendUsername = dr("userName")
+            CrsMainForm.friendAccessLevel = dr("userLevel")
             conn.Close()
             Return True
         End If
