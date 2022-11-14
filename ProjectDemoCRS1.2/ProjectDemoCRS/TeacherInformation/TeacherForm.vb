@@ -1,4 +1,6 @@
-﻿Public Class TeacherForm
+﻿Imports System.ComponentModel
+
+Public Class TeacherForm
     Dim myTeacher As New Teacher
     Dim oldTeacherRec As TeacherRecord
 
@@ -86,13 +88,15 @@
             .ICTextBox.Clear()
             .EmailTextBox.Clear()
             .PhoneNumTextBox.Clear()
-
         End With
     End Sub
 
     Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
+        clearTeacherForm()
         Me.Close()
     End Sub
 
-
+    Private Sub TeacherForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        clearTeacherForm()
+    End Sub
 End Class

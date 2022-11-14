@@ -1,4 +1,6 @@
-﻿Public Class SubjectForm
+﻿Imports System.ComponentModel
+
+Public Class SubjectForm
     Dim mySubject As New Subjectinfo
     Dim oldSubjectRec As SubjectRecordinfo
 
@@ -84,8 +86,11 @@
     End Sub
 
     Private Sub CancelButton_Click(sender As Object, e As EventArgs) Handles CancelButton.Click
+        clearSubjectForm()
         Me.Close()
     End Sub
 
-
+    Private Sub SubjectForm_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
+        clearSubjectForm()
+    End Sub
 End Class

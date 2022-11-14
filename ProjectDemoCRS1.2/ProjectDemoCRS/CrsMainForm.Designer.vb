@@ -41,9 +41,6 @@ Partial Class CrsMainForm
         Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.UserListToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AssignUserToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.HelpToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AbutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ResetPassButton = New System.Windows.Forms.Button()
         Me.GreetingsLabel = New System.Windows.Forms.Label()
         Me.AccessLabel = New System.Windows.Forms.Label()
@@ -63,7 +60,7 @@ Partial Class CrsMainForm
         'MenuStrip2
         '
         Me.MenuStrip2.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ApplicationToolStripMenuItem, Me.RegistrarToolStripMenuItem, Me.ToolStripMenuItem1, Me.ToolStripMenuItem2, Me.SubjectInformationToolStripMenuItem, Me.RegistrationInformationStripMenuItem, Me.ToolStripMenuItem3, Me.HelpToolStripMenuItem})
+        Me.MenuStrip2.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ApplicationToolStripMenuItem, Me.RegistrarToolStripMenuItem, Me.ToolStripMenuItem1, Me.ToolStripMenuItem2, Me.SubjectInformationToolStripMenuItem, Me.RegistrationInformationStripMenuItem, Me.ToolStripMenuItem3})
         Me.MenuStrip2.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip2.Name = "MenuStrip2"
         Me.MenuStrip2.Padding = New System.Windows.Forms.Padding(7, 1, 0, 1)
@@ -81,7 +78,7 @@ Partial Class CrsMainForm
         'LogoutToolStripMenuItem
         '
         Me.LogoutToolStripMenuItem.Name = "LogoutToolStripMenuItem"
-        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(139, 26)
+        Me.LogoutToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.LogoutToolStripMenuItem.Text = "Logout"
         '
         'RegistrarToolStripMenuItem
@@ -95,7 +92,7 @@ Partial Class CrsMainForm
         'TeacherInformationToolStripMenuItem
         '
         Me.TeacherInformationToolStripMenuItem.Name = "TeacherInformationToolStripMenuItem"
-        Me.TeacherInformationToolStripMenuItem.Size = New System.Drawing.Size(190, 26)
+        Me.TeacherInformationToolStripMenuItem.Size = New System.Drawing.Size(151, 26)
         Me.TeacherInformationToolStripMenuItem.Text = "Class List"
         '
         'ToolStripMenuItem1
@@ -129,14 +126,14 @@ Partial Class CrsMainForm
         '
         Me.StudentListToolStripMenuItem.Enabled = False
         Me.StudentListToolStripMenuItem.Name = "StudentListToolStripMenuItem"
-        Me.StudentListToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.StudentListToolStripMenuItem.Size = New System.Drawing.Size(183, 26)
         Me.StudentListToolStripMenuItem.Text = "Student List"
         '
         'SubmitGradeToolStripMenuItem
         '
         Me.SubmitGradeToolStripMenuItem.Enabled = False
         Me.SubmitGradeToolStripMenuItem.Name = "SubmitGradeToolStripMenuItem"
-        Me.SubmitGradeToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
+        Me.SubmitGradeToolStripMenuItem.Size = New System.Drawing.Size(183, 26)
         Me.SubmitGradeToolStripMenuItem.Text = "Submit Grade"
         '
         'SubjectInformationToolStripMenuItem
@@ -186,25 +183,6 @@ Partial Class CrsMainForm
         Me.AssignUserToolStripMenuItem.Name = "AssignUserToolStripMenuItem"
         Me.AssignUserToolStripMenuItem.Size = New System.Drawing.Size(205, 26)
         Me.AssignUserToolStripMenuItem.Text = "Assign User/Staff"
-        '
-        'HelpToolStripMenuItem
-        '
-        Me.HelpToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AboutToolStripMenuItem, Me.AbutToolStripMenuItem})
-        Me.HelpToolStripMenuItem.Name = "HelpToolStripMenuItem"
-        Me.HelpToolStripMenuItem.Size = New System.Drawing.Size(55, 24)
-        Me.HelpToolStripMenuItem.Text = "Help"
-        '
-        'AboutToolStripMenuItem
-        '
-        Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
-        Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(136, 26)
-        Me.AboutToolStripMenuItem.Text = "Search"
-        '
-        'AbutToolStripMenuItem
-        '
-        Me.AbutToolStripMenuItem.Name = "AbutToolStripMenuItem"
-        Me.AbutToolStripMenuItem.Size = New System.Drawing.Size(136, 26)
-        Me.AbutToolStripMenuItem.Text = "About"
         '
         'ResetPassButton
         '
@@ -267,9 +245,6 @@ Partial Class CrsMainForm
     Friend WithEvents TeacherInformationToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents RegistrationInformationStripMenuItem As ToolStripMenuItem
     Friend WithEvents StudentRegistrationToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents HelpToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AbutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem1 As ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem2 As ToolStripMenuItem
     Friend WithEvents FindStaffTeacherToolStripMenuItem As ToolStripMenuItem

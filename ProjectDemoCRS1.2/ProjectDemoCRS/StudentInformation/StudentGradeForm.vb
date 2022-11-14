@@ -47,6 +47,10 @@ Public Class StudentGradeForm
             Dim cmd As New OleDbCommand(sqlString, conn)
             cmd.ExecuteNonQuery()
             conn.Close()
+            UpdateGradeTB.Clear()
+            SubjectCodeTextBox.Clear()
+            ViewMatricNoTextBox.Clear()
+            MessageBox.Show("Grade submitted!")
             'Return True
         Catch ex As Exception
             MessageBox.Show("Error updating teacher record. Message:" & ex.ToString)
