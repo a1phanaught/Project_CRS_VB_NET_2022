@@ -7,4 +7,4 @@ In Visual Studio Community 2022, go to project Properties > Compile > Uncheck "P
 
 Executable and Access database file located in /ProjectDemoCRS/bin/Debug
 
-For emailing, you can change them in ProjectDemoCRS1.2\ProjectDemoCRS\EmailStudentSlip.vb to any email you'd desire. You can get password by going to Google > Mangae Your Account > On the search bar, type App Password > Select App > Select Device > Generate
+For emailing, you can change them in ProjectDemoCRS1.2\ProjectDemoCRS\EmailStudentSlip.vb to any email you'd desire. You can get password by going to Google > Manage Your Account > On the search bar, type App Password > Select App > Select Device > Generate
