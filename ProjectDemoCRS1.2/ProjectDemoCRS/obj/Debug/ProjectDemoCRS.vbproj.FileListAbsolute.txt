@@ -128,7 +128,6 @@ C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\bin\Deb
 C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\bin\Debug\ProjectDemoCRS1.2.pdb
 C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\bin\Debug\ProjectDemoCRS1.2.xml
 C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.AssemblyReference.cache
-C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.vbproj.SuggestedBindingRedirects.cache
 C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.CrsMainForm.resources
 C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.LoginForm.resources
 C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.Resources.resources
@@ -183,3 +182,9 @@ C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.
 C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.UserForm.resources
 C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.UserListForm.resources
 C:\Users\Taufiq Hakimi\Documents\GitHub\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentGradeForm.resources
+C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.EmailStudentSlip.resources
+C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.ResetPasswordForm.resources
+C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.UserForm.resources
+C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.UserListForm.resources
+C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentGradeForm.resources
+C:\xampp\htdocs\Project_CRS_VB_NET_2022\ProjectDemoCRS1.2\ProjectDemoCRS\obj\Debug\ProjectDemoCRS.StudentRegistrationForm.resources

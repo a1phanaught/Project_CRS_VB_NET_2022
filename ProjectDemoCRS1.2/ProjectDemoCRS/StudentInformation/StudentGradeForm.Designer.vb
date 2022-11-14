@@ -22,39 +22,18 @@ Partial Class StudentGradeForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.StudentRegDataGridView = New System.Windows.Forms.DataGridView()
-        Me.MatricNoButton = New System.Windows.Forms.Button()
         Me.ViewMatricNoTextBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.UpdateGradeTB = New System.Windows.Forms.TextBox()
         Me.UpdateGradeButton = New System.Windows.Forms.Button()
-        CType(Me.StudentRegDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SubjectCodeTextBox = New System.Windows.Forms.TextBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
-        '
-        'StudentRegDataGridView
-        '
-        Me.StudentRegDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.StudentRegDataGridView.Location = New System.Drawing.Point(11, 74)
-        Me.StudentRegDataGridView.Margin = New System.Windows.Forms.Padding(2)
-        Me.StudentRegDataGridView.Name = "StudentRegDataGridView"
-        Me.StudentRegDataGridView.RowHeadersWidth = 51
-        Me.StudentRegDataGridView.Size = New System.Drawing.Size(621, 320)
-        Me.StudentRegDataGridView.TabIndex = 0
-        '
-        'MatricNoButton
-        '
-        Me.MatricNoButton.Location = New System.Drawing.Point(330, 11)
-        Me.MatricNoButton.Margin = New System.Windows.Forms.Padding(2)
-        Me.MatricNoButton.Name = "MatricNoButton"
-        Me.MatricNoButton.Size = New System.Drawing.Size(104, 19)
-        Me.MatricNoButton.TabIndex = 1
-        Me.MatricNoButton.Text = "View"
-        Me.MatricNoButton.UseVisualStyleBackColor = True
         '
         'ViewMatricNoTextBox
         '
-        Me.ViewMatricNoTextBox.Location = New System.Drawing.Point(180, 10)
+        Me.ViewMatricNoTextBox.Location = New System.Drawing.Point(253, 159)
         Me.ViewMatricNoTextBox.Margin = New System.Windows.Forms.Padding(2)
         Me.ViewMatricNoTextBox.Name = "ViewMatricNoTextBox"
         Me.ViewMatricNoTextBox.Size = New System.Drawing.Size(134, 20)
@@ -63,7 +42,7 @@ Partial Class StudentGradeForm
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 14)
+        Me.Label1.Location = New System.Drawing.Point(85, 163)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(144, 13)
         Me.Label1.TabIndex = 3
@@ -72,7 +51,7 @@ Partial Class StudentGradeForm
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 44)
+        Me.Label2.Location = New System.Drawing.Point(85, 229)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(64, 13)
         Me.Label2.TabIndex = 4
@@ -80,7 +59,7 @@ Partial Class StudentGradeForm
         '
         'UpdateGradeTB
         '
-        Me.UpdateGradeTB.Location = New System.Drawing.Point(180, 44)
+        Me.UpdateGradeTB.Location = New System.Drawing.Point(253, 229)
         Me.UpdateGradeTB.Margin = New System.Windows.Forms.Padding(2)
         Me.UpdateGradeTB.Name = "UpdateGradeTB"
         Me.UpdateGradeTB.Size = New System.Drawing.Size(134, 20)
@@ -88,7 +67,7 @@ Partial Class StudentGradeForm
         '
         'UpdateGradeButton
         '
-        Me.UpdateGradeButton.Location = New System.Drawing.Point(330, 45)
+        Me.UpdateGradeButton.Location = New System.Drawing.Point(182, 297)
         Me.UpdateGradeButton.Margin = New System.Windows.Forms.Padding(2)
         Me.UpdateGradeButton.Name = "UpdateGradeButton"
         Me.UpdateGradeButton.Size = New System.Drawing.Size(104, 19)
@@ -96,32 +75,47 @@ Partial Class StudentGradeForm
         Me.UpdateGradeButton.Text = "Update"
         Me.UpdateGradeButton.UseVisualStyleBackColor = True
         '
+        'SubjectCodeTextBox
+        '
+        Me.SubjectCodeTextBox.Location = New System.Drawing.Point(253, 194)
+        Me.SubjectCodeTextBox.Margin = New System.Windows.Forms.Padding(2)
+        Me.SubjectCodeTextBox.Name = "SubjectCodeTextBox"
+        Me.SubjectCodeTextBox.Size = New System.Drawing.Size(134, 20)
+        Me.SubjectCodeTextBox.TabIndex = 7
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(85, 197)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(99, 13)
+        Me.Label3.TabIndex = 8
+        Me.Label3.Text = "Enter Subject Code"
+        '
         'StudentGradeForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(643, 445)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.SubjectCodeTextBox)
         Me.Controls.Add(Me.UpdateGradeButton)
         Me.Controls.Add(Me.UpdateGradeTB)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ViewMatricNoTextBox)
-        Me.Controls.Add(Me.MatricNoButton)
-        Me.Controls.Add(Me.StudentRegDataGridView)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "StudentGradeForm"
         Me.Text = "StudentGradeForm"
-        CType(Me.StudentRegDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents StudentRegDataGridView As DataGridView
-    Friend WithEvents MatricNoButton As Button
     Friend WithEvents ViewMatricNoTextBox As TextBox
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents UpdateGradeTB As TextBox
     Friend WithEvents UpdateGradeButton As Button
+    Friend WithEvents SubjectCodeTextBox As TextBox
+    Friend WithEvents Label3 As Label
 End Class

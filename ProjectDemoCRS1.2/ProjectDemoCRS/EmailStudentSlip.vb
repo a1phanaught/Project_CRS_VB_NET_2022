@@ -7,18 +7,20 @@ Public Class EmailStudentSlip
         Try
             Dim Smtp_Server As New SmtpClient
             Dim e_mail As New MailMessage()
+
+
             Smtp_Server.UseDefaultCredentials = False
-            Smtp_Server.Credentials = New Net.NetworkCredential("username@gmail.com", "password")
+            Smtp_Server.Credentials = New Net.NetworkCredential("vb.net.utm@gmail.com", "wigaqvxiyeapsqvp")
             Smtp_Server.Port = 587
             Smtp_Server.EnableSsl = True
             Smtp_Server.Host = "smtp.gmail.com"
 
             e_mail = New MailMessage()
-            e_mail.From = New MailAddress(FromTextBox.Text)
+            e_mail.From = New MailAddress("vb.net.utm@gmail.com")
             e_mail.To.Add(ToTextbox.Text)
-            e_mail.Subject = "Email Sending"
+            e_mail.Subject = "Student Slip"
             e_mail.IsBodyHtml = False
-            'e_mail.Body = 
+            'e_mail.Body = StudentRegistrationForm.imag
             Smtp_Server.Send(e_mail)
             MsgBox("Mail Sent")
 

@@ -50,6 +50,8 @@
             StudentListToolStripMenuItem.Enabled = True
             SubjectInformationToolStripMenuItem.Enabled = True
             RegistrationInformationStripMenuItem.Enabled = True
+        Else
+            SubmitGradeToolStripMenuItem.Enabled = True
         End If
     End Sub
 

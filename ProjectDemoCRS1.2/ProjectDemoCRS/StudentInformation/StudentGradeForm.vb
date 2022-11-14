@@ -13,6 +13,7 @@ Public Class StudentGradeForm
 
     Dim sqlString As String
     Dim mMatricString As String
+
     Dim studentMdl As New Student
     Private Sub StudentGradeForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conn.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
@@ -30,51 +31,27 @@ Public Class StudentGradeForm
         conn.Close()
     End Sub
 
-    Private Sub MatricNoButton_Click(sender As Object, e As EventArgs) Handles MatricNoButton.Click
-        Dim cmd1 As New OleDbCommand("SELECT student.name,student.matricNumber,subject.subjectName,subjectregister.Grade FROM (student INNER JOIN subjectregister on student.matricNumber = subjectregister.matricNumber)  INNER JOIN subject on subject.subjectCode = subjectregister.subjectCode WHERE student.matricNumber like '%" + ViewMatricNoTextBox.Text + "%'", conn)
-        Dim da As New OleDbDataAdapter
-        Dim dt As New DataTable
-
-        Me.ds.Clear()
-        da.SelectCommand = cmd1
-        dt.Clear()
-        da.Fill(dt)
-        StudentRegDataGridView.DataSource = dt
-        StudentRegDataGridView.Columns(0).HeaderText = "Name"
-        StudentRegDataGridView.Columns(1).HeaderText = "Matric Number"
-        StudentRegDataGridView.Columns(2).HeaderText = "Subject Name"
-        StudentRegDataGridView.Columns(3).HeaderText = "Grade"
-
-        StudentRegDataGridView.AllowUserToAddRows = False
-        Dim buttoncolumn As New DataGridViewButtonColumn
-        buttoncolumn.UseColumnTextForButtonValue = True
-        buttoncolumn.HeaderText = "Update User"
-        buttoncolumn.Width = 100
-        buttoncolumn.Text = "Update"
-        buttoncolumn.DefaultCellStyle.BackColor = Color.SkyBlue
-        buttoncolumn.FlatStyle = FlatStyle.Flat
-        StudentRegDataGridView.Columns.Insert(4, buttoncolumn)
-
-    End Sub
-
-    Private Sub StudentRegDataGridView_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles StudentRegDataGridView.CellContentClick
-        If e.ColumnIndex = 4 Then
-            Dim r1 As DataGridViewRow = StudentRegDataGridView.Rows(e.RowIndex)
-            Dim cm2 As New OleDbCommand("UPDATE subjectregister SET Grade=@Grade", conn)
-            cm2.Parameters.AddWithValue("Grade", r1.Cells("Grade").Value)
+    Private Sub UpdateGradeButton_Click(sender As Object, e As EventArgs) Handles UpdateGradeButton.Click
+        Try
+            Dim sqlString As String
+            conn.ConnectionString = My.Resources.databaseConnectionPath & Application.StartupPath & My.Resources.databaseName
             conn.Open()
-            cm2.ExecuteNonQuery()
+
+            sqlString = "UPDATE subjectregister SET Grade = '" & UpdateGradeTB.Text & "' WHERE matricNumber = '" & ViewMatricNoTextBox.Text & "' and subjectCode = '" & SubjectCodeTextBox.Text & "'"
+            'sqlString = sqlString & " name = '" & newTeacherRec.name & "',"
+            'sqlString = sqlString & " email = '" & newTeacherRec.email & "',"
+            'sqlString = sqlString & " phoneNumber = '" & newTeacherRec.phoneNumber & "'"
+            'sqlString = sqlString & " where icNumber = '" & oldTeacherRec.ic & "'"
+
+            MessageBox.Show(sqlString)
+            Dim cmd As New OleDbCommand(sqlString, conn)
+            cmd.ExecuteNonQuery()
             conn.Close()
-            MessageBox.Show("Grade Updated!")
-        End If
+            'Return True
+        Catch ex As Exception
+            MessageBox.Show("Error updating teacher record. Message:" & ex.ToString)
+            'Return False
+            conn.Close()
+        End Try
     End Sub
-
-    Private Sub StudentRegDataGridView_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles StudentRegDataGridView.CellClick
-        Dim index As Integer
-        index = e.RowIndex
-        Dim selectedrow As DataGridViewRow = StudentRegDataGridView.Rows(index)
-        UpdateGradeTB.Text = selectedrow.Cells(3).Value.ToString
-    End Sub
-
-
 End Class

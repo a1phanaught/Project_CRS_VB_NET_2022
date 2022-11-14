@@ -12,6 +12,7 @@ Public Class StudentRegistrationForm
     Dim sqlString As String
     Dim mMatricString As String
     Dim studentMdl As New Student
+    Friend imagebmp As Bitmap
 
     'Connect to DB
     Private Sub StudentRegistrationForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -60,6 +61,22 @@ Public Class StudentRegistrationForm
         Next
         TotalCreditLabel.Text = colsum.ToString
         FeeAmountLabel.Text = (colsum * 50).ToString("C")
+
+        Dim fullString As String '= "Matric Number" + vbTab + "Name" + vbTab + "Subject Code" + vbTab + "Subject Name" + vbTab + "Subject Credit"
+        fullString &= "Matric Number" + vbTab + ViewMatricNoTextBox.Text + vbNewLine
+
+        For Each row As DataGridViewRow In StudentRegDataGridView.Rows
+            If Not row.IsNewRow Then
+                fullString &= vbNewLine + "====================================" + vbNewLine
+                fullString &= "Subject Code" + vbTab + row.Cells(2).Value.ToString + vbNewLine
+                fullString &= "Subject Name" + vbTab + row.Cells(3).Value.ToString + vbNewLine
+                fullString &= "Subject Credit" + vbTab + row.Cells(4).Value.ToString + vbNewLine
+            End If
+        Next
+
+
+        MessageBox.Show(fullString)
+
 
 
 
@@ -114,7 +131,7 @@ Public Class StudentRegistrationForm
     End Sub
 
     Private Sub PrintDocument2_PrintPage(sender As Object, e As Printing.PrintPageEventArgs) Handles PrintDocument2.PrintPage
-        Dim imagebmp As New Bitmap(Me.SubjectListGridView.Width, Me.SubjectListGridView.Height)
+        imagebmp = New Bitmap(Me.SubjectListGridView.Width, Me.SubjectListGridView.Height)
         SubjectListGridView.DrawToBitmap(imagebmp, New Rectangle(0, 0, Me.SubjectListGridView.Width, Me.SubjectListGridView.Height))
         e.Graphics.DrawImage(imagebmp, 0, 0)
     End Sub
