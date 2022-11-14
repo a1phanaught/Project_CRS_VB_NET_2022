@@ -13,6 +13,7 @@ Public Class StudentRegistrationForm
     Dim mMatricString As String
     Dim studentMdl As New Student
     Friend imagebmp As Bitmap
+    Friend fullString As String
 
     'Connect to DB
     Private Sub StudentRegistrationForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -62,7 +63,7 @@ Public Class StudentRegistrationForm
         TotalCreditLabel.Text = colsum.ToString
         FeeAmountLabel.Text = (colsum * 50).ToString("C")
 
-        Dim fullString As String '= "Matric Number" + vbTab + "Name" + vbTab + "Subject Code" + vbTab + "Subject Name" + vbTab + "Subject Credit"
+        'Dim fullString As String '= "Matric Number" + vbTab + "Name" + vbTab + "Subject Code" + vbTab + "Subject Name" + vbTab + "Subject Credit"
         fullString &= "Matric Number" + vbTab + ViewMatricNoTextBox.Text + vbNewLine
 
         For Each row As DataGridViewRow In StudentRegDataGridView.Rows

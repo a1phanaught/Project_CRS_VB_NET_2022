@@ -20,7 +20,7 @@ Public Class EmailStudentSlip
             e_mail.To.Add(ToTextbox.Text)
             e_mail.Subject = "Student Slip"
             e_mail.IsBodyHtml = False
-            'e_mail.Body = StudentRegistrationForm.imag
+            e_mail.Body = StudentRegistrationForm.fullString
             Smtp_Server.Send(e_mail)
             MsgBox("Mail Sent")
 
